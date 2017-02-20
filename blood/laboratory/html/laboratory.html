@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address button{margin-top: 4px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box div{background: white;display: inline-block;width: 100%;}
+			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width: 98%;margin: 0 1%;}
+			#box .b1 table{width: 97%;margin: 20px auto;}
+			#box .b1 tr:nth-of-type(odd){background: #f4f9fd;}
+			#box .b1 tr:nth-of-type(even){background: white;}
+			#box .b2{box-shadow: 2px 2px 4px #CCCCCC;width: 98%;margin: 0 1%;margin-top: 10px;}
+			#box .b2 table{width: 20%;margin: 20px 5% 20px 1%;float: left;}	
+			#box .b2 tr:nth-of-type(even){background: white;}
+			#box .b2 td{border: 1px solid #e5e5e7;}
+			#box .b2 p{margin-top: 184px;font-weight: bold;}
+			#box .b2 p span{font-weight: normal;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:预出库管理</span><button>结果录入</button><button>删除</button><button>查询</button><button>列表打印</button></p>
+		<div id="box">
+			<div class="b1">
+				<h3>已预出库列表</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th>选择</th>
+						<th width="10%">预出库日期</th>
+						<th>病历号</th>
+						<th>姓名</th>
+						<th>年龄</th>
+						<th>性别</th>
+						<th>血液类型</th>
+						<th>献血码</th>
+						<th>产品号</th>
+						<th>ABO血型</th>
+						<th>RH血型</th>
+						<th>RH表型</th>
+						<th>数量</th>
+						<th>单位</th>
+						<th>状态</th>
+						<th>预出库者</th>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>1112222</td>
+						<td>xxxx</td>
+						<td>17</td>
+						<td>男</td>
+						<td>红细胞悬液</td>
+						<td>0103323233</td>
+						<td>17591500</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>2.0</td>
+						<td>U</td>
+						<td>已预出库</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>1112222</td>
+						<td>xxxx</td>
+						<td>17</td>
+						<td>男</td>
+						<td>红细胞悬液</td>
+						<td>0103323233</td>
+						<td>17591500</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>2.0</td>
+						<td>U</td>
+						<td>已预出库</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>1112222</td>
+						<td>xxxx</td>
+						<td>17</td>
+						<td>男</td>
+						<td>红细胞悬液</td>
+						<td>0103323233</td>
+						<td>17591500</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>2.0</td>
+						<td>U</td>
+						<td>已预出库</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>1112222</td>
+						<td>xxxx</td>
+						<td>17</td>
+						<td>男</td>
+						<td>红细胞悬液</td>
+						<td>0103323233</td>
+						<td>17591500</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>2.0</td>
+						<td>U</td>
+						<td>已预出库</td>
+						<td>xxxx</td>
+					</tr>
+				</table>
+			</div>
+			<div class="b2">
+				<h3>预出库领取合计</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th>红细胞</th>
+						<th>血袋</th>
+						<th>数量</th>
+						<th>单位</th>
+					</tr>
+					<tr>
+						<td>预出库</td>
+						<td>5</td>
+						<td>4.0</td>
+						<td>u</td>
+					</tr>
+					<tr>
+						<td>已出库</td>
+						<td>5</td>
+						<td>4.0</td>
+						<td>u</td>
+					</tr>
+					<tr>
+						<td>出库率</td>
+						<td colspan="2">60%</td>
+						<td>u</td>
+					</tr>
+				</table>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th>血小板</th>
+						<th>血袋</th>
+						<th>数量</th>
+						<th>单位</th>
+					</tr>
+					<tr>
+						<td>预出库</td>
+						<td>5</td>
+						<td>4.0</td>
+						<td>u</td>
+					</tr>
+					<tr>
+						<td>已出库</td>
+						<td>5</td>
+						<td>4.0</td>
+						<td>u</td>
+					</tr>
+					<tr>
+						<td>出库率</td>
+						<td colspan="2">60%</td>
+						<td>u</td>
+					</tr>
+				</table>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th>血浆</th>
+						<th>血袋</th>
+						<th>数量</th>
+						<th>单位</th>
+					</tr>
+					<tr>
+						<td>预出库</td>
+						<td>5</td>
+						<td>4.0</td>
+						<td>u</td>
+					</tr>
+					<tr>
+						<td>已出库</td>
+						<td>5</td>
+						<td>4.0</td>
+						<td>u</td>
+					</tr>
+					<tr>
+						<td>出库率</td>
+						<td colspan="2">60%</td>
+						<td>u</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

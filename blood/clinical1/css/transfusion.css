@@ -1,0 +1,19 @@
+.right>div{margin-top:10px ;}
+.right>div p{margin-bottom: 4px;}
+.right div{width: 90%;}
+.right div p span{display: inline-block;width: 45%;text-align: right;}
+.right div p input{width: 53%;}
+.bot{background: black;opacity: 0.8;position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 6;}
+.top{position:fixed;left:0;top:30%;width: 400px;margin: 0 35%;z-index: 7;background: white;}
+.top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+.top h3 span{float: right;margin-right: 30px;}
+.top div{width: 260px;margin: 20px auto;}
+.top div p{margin-bottom: 4px;}
+.top div p span{display: inline-block;width: 70px;text-align: right;}
+.top table{width: 260px;margin: 0 auto;}
+.top table tr{height: 30px;}
+.top table tr td{border: 1px solid #;}
+.top table select{height: 20px;}
+.top table tr:nth-of-type(even){background: #fff;}
+.top table tr:nth-of-type(odd){background: #f4f9fd;}
+.top button{margin-top: 20px;margin-bottom: 30px;float: right;margin-right: 65px;}

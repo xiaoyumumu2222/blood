@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address button{margin-top: 7px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box div{background: white;display: inline-block;width: 100%;}
+			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width:78%;margin: 0 1%;float: left;}
+			#box .b2{box-shadow: 2px 2px 4px #CCCCCC;width:19%;float: left;display: inline-block}
+			#box .b1 div{float: left;width: 35%;}
+			#box .b1 div p{margin-top: 10px;}
+			#box .b1 div:last-child{float: right;margin-right: 1.2%;}
+			#box .b1 div p span{display: inline-block;width: 25%;text-align: right;}
+			#box .b1 div p input{width: 34%;}
+			#box .b1 div p select{width: 34%;height: 26px;}
+			#box .b1 div:nth-last-child(4){width: 28%;}
+			#box .b1 div:nth-last-child(4) p span{display: inline-block;width: 40%;text-align: right;}
+			#box .b1 button{float: right;margin: 12px 3% 22px 0;}
+			#box .b3 table{width: 97%;margin: 20px auto;}
+			#box .b3 tr:nth-of-type(odd){background: #f4f9fd;}
+			#box .b3 tr:nth-of-type(even){background: white;}
+			#box .b3{box-shadow: 2px 2px 4px #CCCCCC;width:98%;margin: 0 1%;margin-top: 10px;}
+			#box .b2 table{width: 60%;margin: 10px 0 20px 10%;}	
+			#box .b2 tr:nth-of-type(even){background: white;}
+			#box .b2 td{border: 1px solid #e5e5e7;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bloodbag.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:标本查询管理</span></p>
+		<div id="box">
+			<div class="b1">
+				<h3>血袋查询条件</h3>
+				<div>
+					<p><span>血袋号：</span><input type="text"/></p>
+					<p><span>血液类型：</span><select name=""><option value=""></option></select></p>
+					<p><span>血液状态：</span><select name=""><option value=""></option></select></p>
+					<p><span>ABO血型：</span><select name=""><option value=""></option></select></p>
+				</div>
+				<div>
+					<p><span>RH血型：</span><select name=""><option value=""></option></select></p>
+					<p><span>RH表型：</span><select name=""><option value=""></option></select></p>
+					<p><span>标本条码：</span><input type="text"/>~~<input type="text"/></p>
+					<p><span>过期日期：</span><input type="text"/>~~<input type="text"/></p>
+				</div>
+				<div>
+					<p><span>入库日期：</span><input type="text"/>~~<input type="text"/></p>
+					<p><span>出库日期：</span><input type="text"/>~~<input type="text"/></p>
+					<p><span>回收日期：</span><input type="text"/>~~<input type="text"/></p>
+					<p><span>销毁日期：</span><input type="text"/>~~<input type="text"/></p>
+				</div>
+				<div>
+					<button>打印</button><button>查询</button>
+				</div>
+			</div>
+			<div class="b2">
+				<h3>血袋分类合计</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th width="60%">按血液状态</th>
+						<th>袋数</th>
+					</tr>
+					<tr>
+						<td>已入库(在库)</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>已出库</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>已报废</td>
+						<td>30</td>
+					</tr>
+					<tr>
+						<td>已回收</td>
+						<td>30</td>
+					</tr>
+					<tr>
+						<td>已销毁</td>
+						<td>30</td>
+					</tr>
+				</table>
+			</div>
+			<div class="b3">
+				<h3>血袋信息列表</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th>NO</th>
+						<th>产品号</th>
+						<th width="10%">血液类型</th>
+						<th>血液状态</th>
+						<th>ABO血型</th>
+						<th>RH血型</th>
+						<th>RH表型</th>
+						<th>数量</th>
+						<th>单位</th>
+						<th width="10%">制备日期</th>
+						<th width="10%">到期日期</th>
+						<th width="10%">入库日期</th>
+						<th width="10%">出库日期</th>
+						<th width="10%">回收日期</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>17591500</td>
+						<td>普通冰冻血浆</td>
+						<td>已入库</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>200</td>
+						<td>U</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>17591500</td>
+						<td>普通冰冻血浆</td>
+						<td>已入库</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>200</td>
+						<td>U</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>17591500</td>
+						<td>普通冰冻血浆</td>
+						<td>已入库</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>200</td>
+						<td>U</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>17591500</td>
+						<td>普通冰冻血浆</td>
+						<td>已入库</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>200</td>
+						<td>U</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>17591500</td>
+						<td>普通冰冻血浆</td>
+						<td>已入库</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>200</td>
+						<td>U</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>17591500</td>
+						<td>普通冰冻血浆</td>
+						<td>已入库</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>200</td>
+						<td>U</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>17591500</td>
+						<td>普通冰冻血浆</td>
+						<td>已入库</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>200</td>
+						<td>U</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

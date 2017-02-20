@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/jedate.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bprocess.css"/>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js"></script>
+		<script src="../js/common/nwmatcher.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lte IE 8]><script src="../js/common/selectivizr.js"></script><![endif]-->
+	</head>
+	<body>
+		
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'>当前位置:<span>输血流程</span><button id="num">数值设定</button></p>
+		<div id="box">
+			<div class="left">
+				<h3>急/门诊患者列表</h3>
+				<div>
+					<dl>
+						<dt>
+							<p><span>住院号：</span><input type="text"/></p>
+							<p><span>患者姓名：</span><input type="text"/></p>
+						</dt>
+						<dd>
+							<button>查询</button>
+						</dd>
+					</dl>
+					
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th width="6%">选择</th>
+							<th width="8%">床位号</th>
+							<th width="8%">住院号</th>
+							<th width="8%">姓名</th>
+							<th width="5%">年龄</th>
+							<th width="5%">性别</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td><input type="radio"/></td>
+							<td>1111</td>
+							<td>1112</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="center">
+				<div class="d1">
+					<h3>患者基本信息</h3>
+					<div>
+						<p><span>在院方式：</span><input type="text" value="1221122" disabled="disabled"/></p>
+						<p><span>病区：</span><input type="text" value="20" disabled="disabled"/></p>
+						<p><span>床位号：</span><input type="text" value="11" disabled="disabled"/></p>
+						<p><span>患者姓名：</span><input type="text" value="张三" disabled="disabled"/></p>
+						<p><span>年龄：</span><input type="text" value="30" disabled="disabled"/></p>
+						<p><span>性别：</span><input type="text" value="男" disabled="disabled"/></p>
+						<p><span>ABO血型：</span><input type="text" value="A型" disabled="disabled"/></p>
+						<p><span>RH(D)血型：</span><input type="text" value="阳性（+）" disabled="disabled"/></p>
+					</div>	
+					<div>
+						<p><span>既往输血史：</span><input type="text" value="住院" disabled="disabled"/></p>
+						<p><span>输血反应史：</span><input type="text" value="已签" disabled="disabled"/></p>
+						<p><span>妊娠史：</span><input type="text" value="30" disabled="disabled"/></p>
+						<p><span>申请科室：</span><input type="text" value="男" disabled="disabled"/></p>
+						<p><span>申请医生：</span><input type="text" value="30" disabled="disabled"/></p>
+						<p><span>医生电话：</span><input type="text" value="男" disabled="disabled"/></p>
+						<p><span>诊断：</span><input type="text" value="30" disabled="disabled"/></p>
+					</div>
+				</div>
+				<div style="width: 100%;height:5px;background: #f5f5f5;clear: both;border-top:2px solid #dfdfdf;box-sizing:border-box;margin-top: 0;"></div>
+				<div class="d3">
+					<h3>输血流程控制</h3>
+					<ul class="bmessage">
+						<li class="bactive">输血核对 <span></span></li>
+						<li>输血开始 <span>></span></li>
+						<li>输血观察 <span>></span></li>
+						<li>输血结束 <span>></span></li>
+					</ul>
+					<div class="in1">
+						<div>
+							<p><span>核对者：</span><input type="text" value="1221122" /></p>
+							<p><span>见证者：</span><input type="text" value="20"/></p>
+							<p><span>核对时间：</span><input type="text" value="2016/9/26 09:24"/></p>
+						</div>
+						<div>
+							<p><span>血袋号：</span><input type="text" value="30"/></p>
+							<p><span>交叉配血单：</span><input type="text" value="男"/></p>
+						</div>	
+					</div>
+					<div class="in2">
+						<dl>
+							<dt>
+								<p><span>护士者：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>腕带：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>开始时间：</span><input type="text" name="" id="" value="" /></p>
+								
+							</dt>
+							<dd>
+								<p><span>血袋号：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>滴速(观察前)：</span><input type="text" name="" id="" value="" /> 滴/分钟</p>
+								
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<p><span>体温：</span><input type="text" name="" id="" value="" /> ℃</p>
+								<p><span>血压：</span><input type="text" name="" id="" value="" /> / <input type="text" name="" id="" value="" /> mmHg</p>
+							</dt>
+							<dd>
+								<p><span>心率：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+								<p><span>呼吸：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+								<p><span>血氧饱和度：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="in3">
+						<dl>
+							<dt>
+								<p><span>护士者：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>腕带：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>观察时间：</span><input type="text" name="" id="" value="" /></p>
+								
+							</dt>
+							<dd>
+								<p><span>血袋号：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>滴速(观察前)：</span><input type="text" name="" id="" value="" /> 滴/分钟</p>
+								
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<p><span>体温：</span><input type="text" name="" id="" value="" /> ℃</p>
+								<p><span>血压：</span><input type="text" name="" id="" value="" /> / <input type="text" name="" id="" value="" /> mmHg</p>
+								<p><span>不良反应：</span><input type="radio" name="" id="" value="2" checked="checked" /><b>无</b>&nbsp;<input type="radio" name="" id="" value="1" /><b>有</b></p>
+							</dt>
+							<dd>
+								<p><span>心率：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+								<p><span>呼吸：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+								<p><span>血氧饱和度：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="in4">
+						<dl>
+							<dt>
+								<p><span>护士者：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>腕带：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>观察时间：</span><input type="text" name="" id="" value="" /></p>
+								
+							</dt>
+							<dd>
+								<p><span>血袋号：</span><input type="text" name="" id="" value="" /></p>
+								<p><span>滴速(观察后)：</span><input type="text" name="" id="" value="" /> 滴/分钟</p>
+								
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<p><span>体温：</span><input type="text" name="" id="" value="" /> ℃</p>
+								<p><span>血压：</span><input type="text" name="" id="" value="" /> / <input type="text" name="" id="" value="" /> mmHg</p>
+								<p><span>不良反应：</span><input type="radio" name="" id="" value="1" checked="checked" /><b>无</b>&nbsp;<input type="radio" name="" id="" value="" /><b>有</b></p>
+							</dt>
+							<dd>
+								<p><span>心率：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+								<p><span>呼吸：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+								<p><span>血氧饱和度：</span><input type="text" name="" id="" value="" /> 次/分钟</p>
+							</dd>
+						</dl>
+					</div>
+					
+				</div>
+			</div>
+			<div class="right">
+				<div class="d2">
+					<h3>输血监控信息</h3>
+					<div>
+						<p><span>输血状态：</span><input type="text" value="1221122" disabled="disabled"/></p>
+						<p><span>开始时间：</span><input type="text" value="20" disabled="disabled"/></p>
+						<p><span>结束时间：</span><input type="text" value="11" disabled="disabled"/></p>
+						<p><span>输注计时：</span><input type="text" value="张三" disabled="disabled" style="width: 36%;"/> 分钟</p>
+					</div>
+					<div>
+						<p><span>预计结束：</span><input type="text" value="30" disabled="disabled"/></p>
+						<p><span>预计剩余：</span><input type="text" value="男" disabled="disabled" style="width: 36%;"/> 分钟</p>
+						<p><span>滴速：</span><input type="text" value="A型" disabled="disabled" style="width: 36%;"/> 滴/分钟</p>
+						<p style="float: right;color: #de0025;margin-right: 10%;text-indent: -9%;">注：滴速监控<br>15分钟前：20-30滴/分<br>15分钟后：红细胞60滴/分<br>其他100滴/分</p>
+					</div>	
+				</div>
+				<div style="width: 100%;height:5px;background: #f5f5f5;clear: both;box-sizing:border-box;margin-top: 0;"></div>
+				<div class="d5" style="border-right: 1px solid transparent;box-sizing:border-box;">
+					<h3>血袋核对信息</h3>
+					<table>
+						<thead>
+							<tr>
+								<th width="6%">NO</th>
+								<th width="10%">姓名</th>
+								<th width="5%">年龄</th>
+								<th width="5%">性别</th>
+								<th width="10%">床位号</th>
+								<th width="10%">住院号</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>张珊珊</td>
+								<td>31</td>
+								<td>男</td>
+								<td>1111</td>
+								<td>1112</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>张珊珊</td>
+								<td>31</td>
+								<td>男</td>
+								<td>1111</td>
+								<td>1112</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>张珊珊</td>
+								<td>31</td>
+								<td>男</td>
+								<td>1111</td>
+								<td>1112</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—监控数值设定<span>╳</span></h3>
+					<h4>滴速设定(普通)</h4>
+					<dl>
+						<dt>
+							<p><span>悬浮红细胞：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+							<p><span>血浆：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+							<p><span>血小板：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+						</dt>
+						<dd>
+							<p><span>误差(±滴)：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+							<p><span>误差(±滴)：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+							<p><span>误差(±滴)：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+						</dd>
+						
+					</dl>
+					<h4>滴速设定(观察时间前)</h4>
+					<dl>
+						<dt>
+							<p><span>血液制品：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+						</dt>
+						<dd>
+							<p><span>误差(±滴)：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+						</dd>
+						
+					</dl>
+					<h4>其他设定</h4>
+					<dl>
+						<dt>
+							<p><span>警报剩余容量：</span><input type="text" name="" id="" value=""/> ML</p>
+							<p><span>警报时间间隔：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+							<p><span>观察时间设定：</span><input type="text" name="" id="" value=""/> 滴/分钟</p>
+						</dt>
+						<dd></dd>
+					</dl>
+					<button>数据设定</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="clearfix"></div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

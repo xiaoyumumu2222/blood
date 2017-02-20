@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/jedate.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
+	</head>
+	<body>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js"></script>
+		<script src="../js/common/nwmatcher.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lte IE 8]><script src="../js/common/selectivizr.js"></script><![endif]-->
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#cancel").click(function(){
+					$("#shade").show();
+				})
+			})
+		</script>
+		<p id='address'>当前位置:<span>输血单申请</span></p>
+		<div id="box">
+			<div class="left">
+				<h3>急/门诊患者列表</h3>
+				<div>
+					<dl>
+						<dt>
+							<p><span>申请日期：</span><input type="text" id="dateStart"/>--<input type="text" data-beatpicker="true" id="dateEnd"/></p>
+							<p><span>患者姓名：</span><input type="text"/></p>
+						</dt>
+						<dd>
+							<p><span>条码状态：</span><input type="radio" checked="checked"/><b>未打印</b><input type="radio"/><b>已打印</b><input type="radio"/><b>已撤销</b><input type="radio"/><b>已撤回</b></p>
+							<p><span>标本条码：</span><input type="text" disabled="disabled"/></p>
+							<button>查询</button>
+						</dd>
+					</dl>
+					
+				</div>
+				<div id="bottom">
+					<p><input type="checkbox"/><span>显示老患者2次血浆申请单</span></p>
+					<button class="barcode1">条形码打印</button>
+					<button class="barcode2" id="cancel">条形码撤销</button>
+					<button class="barcode2">条形码补打</button>
+					<button class="barcode3">取消并打印</button>
+					<button class="barcode4">条形码重打</button>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th width="5%">选择</th>
+							<th width="13%">申请日期</th>
+							<th width="12%">申请单号</th>
+							<th width="6%">方式</th>
+							<th width="6%">床位号</th>
+							<th width="7%">姓名</th>
+							<th width="5%">年龄</th>
+							<th width="5%">性别</th>
+							<th width="6%">ABO血型</th>
+							<th width="10%">RH（D）血型</th>
+							<th width="20%">申请种类及用量</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"/></td>
+							<td>2016/9/29 09:30</td>
+							<td>Y000000001</td>
+							<td>住院</td>
+							<td>1122</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>A型</td>
+							<td>阳性（+）</td>
+							<td>悬浮红细胞2U;血浆400ml</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="right">
+				<h3>申请基本信息</h3>
+				<div>
+					<p><span>患者姓名：</span><input type="text" disabled="disabled" value="张三"/></p>
+					<p><span>病区：</span><input type="text" disabled="disabled" value="20"/></p>
+					<p><span>床位号：</span><input type="text" disabled="disabled" value="20"/></p>
+					<p><span>年龄：</span><input type="text" disabled="disabled" value="30"/></p>
+					<p><span>性别：</span><input type="text" disabled="disabled" value="男"/></p>
+					<p><span>诊断：</span><input type="text" disabled="disabled" value="xxxxxx"/></p>
+					<p><span>既往输血史：</span><input type="text" disabled="disabled" value="无"/></p>
+					<p><span>输血反映史：</span><input type="text" disabled="disabled" value="无"/></p>
+					<p><span>是否交叉配血：</span><input type="text" disabled="disabled" value="是"/></p>
+					<p><span>输血同意书：</span><input type="text" disabled="disabled" value="已签"/></p>
+					<p><span>输血审批单：</span><input type="text" disabled="disabled" value="无"/></p>
+				</div>
+				<div>
+					<p><span>申请科室：</span><input type="text" disabled="disabled" value="xxx外科"/></p>
+					<p><span>申请医生：</span><input type="text" disabled="disabled" value="yyy"/></p>
+					<p><span>核准医生：</span><input type="text" disabled="disabled" value="xxx"/></p>
+					<p><span>医生电话：</span><input type="text" disabled="disabled" value="123456789"/></p>
+					<p><span>申请日期：</span><input type="text" disabled="disabled" value="2017/12/1"/></p>
+					<p><span>用血日期：</span><input type="text" disabled="disabled" value="2011/2/11"/></p>
+					<p><span>需求方式：</span><input type="text" disabled="disabled" value="常规手术"/></p>
+					<p><span>输血目的：</span><input type="text" disabled="disabled" value="xxxx"/></p>
+				</div>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—条码撤销<span>╳</span></h3>
+					<div>
+						<p><span>撤销者：</span><input type="text" name="" id="" value="" disabled="disabled"/></p>
+						<p><span>申请时间：</span><input type="text" name="" id="" value="" disabled="disabled"/></p>
+					</div>
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th>NO</th>
+							<th>条码号</th>
+							<th>撤销理由</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>A000000001</td>
+							<td>
+								<select name="">
+									<option value="">暂时不需</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>A000000001</td>
+							<td>
+								<select name="">
+									<option value="">病人失踪</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<button>保存</button>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

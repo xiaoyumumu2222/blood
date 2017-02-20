@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>-->
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address button{margin-top: 7px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			.left{width: 48.5%;box-shadow:0px 2px 4px #CCCCCC;}
+			.right{width: 48.5%;box-shadow:0px 2px 4px #CCCCCC;}
+			.right div p input{width: 53%;}
+			.left table{margin-top:10px ;}
+			.left tr:nth-of-type(even){background: #fff;}
+			.left tr:nth-of-type(odd){background: #f4f9fd;}
+			.right div{width: 94%;}
+			.header1{height:60px;border-bottom:2px solid black ;clear: both;display: inline-block;margin: 0 3%;box-sizing:border-box;position: relative;}
+			.header1 div:first-child{position: absolute;left: 0px;top: 11px;}
+			.header1 div:nth-child(2){width:100%;text-align: center;line-height: 60px;}
+			.right input[type="text"]{border: none;border-bottom:1px solid black ;text-indent: 5px;}
+			.right select{border: none;border-bottom:1px solid black ;}
+			.header1 input{border: none;border-bottom:1px solid black ;width: 14%;text-indent: 5px;font-weight: bold;}
+			.header1 div p:first-child input{height: 26px;vertical-align: bottom;font-size: 20px;}
+			.header1 span{display: inline-block;width:86%;text-align: right;}
+			.right ul{margin: 0 3%;}
+			.right>ul>li{border-bottom: 2px solid #000000;clear: both;display: inline-block;padding:10px 0;width: 100%;}
+			.right ul li:last-child{border: none;}
+			.right ul li:nth-child(1) div p{float: left;}
+			.right ul li:nth-child(1) div p span{display: inline-block;text-align: right;font-weight:bold ;}
+			.right ul li:nth-child(1) div:last-child{clear: both;}
+			.right ul li:nth-child(2) div p span{font-weight: bold;text-align: left;}
+			.right ul li:nth-child(2) div p input{width: 10%;}
+			.right ul li:nth-child(2) div table{margin-left: 20%;width: 50%;margin-top: 4px;}
+			.right ul li:nth-child(2) div table,.right ul li:nth-child(2) div table td,.right ul li:nth-child(2) div table th{border: 1px solid #000000;}
+			.right ul li:nth-child(2) div table tr th{background: #fbfbfb;text-align: center;border: 1px solid #e4e4e4;}
+			.right ul li:nth-child(2) div table tr td{border: 1px solid #e4e4e4;}
+			.right ul li:nth-child(2) div table tr{background: none;}
+			.right ul li:nth-child(3) div div{margin-left: 3%;}
+			.right ul li:nth-child(3) div div p{margin-left: 3%;}
+			.right ul li:nth-child(3) div div:last-child p{text-indent: -3%;margin-left: 3%;margin-top: 20px;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:20%;width: 22%;min-width:200px;margin:0 39%;z-index: 11;background: #fff;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top div{margin-top: 10px;}
+			#shade .top div p{line-height: 28px;}
+			#shade .top div p:last-child{width: 78%;float: right;margin:14px 22% 20px 0;}
+			#shade .top div p:last-child button{float: right;margin-left: 20px;}
+			#shade .top div p span{display: inline-block;width: 34%;text-align: right;}
+			#shade .top div p select{width:36%;height: 22px;}
+			#shade .top div p input{width:43%;height: 20px;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:TEG申请</span><button>查询</button><button>列表打印</button><button>申请单打印</button></p>
+		<div id="box">
+			<div class="left">
+				<h3>TEG申请单</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th width="10%">选择</th>
+						<th width="10%">完成状态</th>
+						<th width="10%">方式</th>
+						<th width="10%">姓名</th>
+						<th width="10%">年龄</th>
+						<th width="10%">性别</th>
+						<th width="30%">检测项目</th>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>血小板图和肝素酶对比检测（85项）</td>
+					</tr>
+				</table>
+			</div>
+			<div class="right">
+				<h3>TEG试验申请详细</h3>
+				<div class="header1">
+					<div>
+						<p>00000000000</p><img src="../img/1.png" />
+					</div>
+					<div>
+						<h2>XXXXX医院血栓弹力图(TEG)试验申请单</h2>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p style="width: 16%;"><span style="width: 42%;">姓名:</span><input type="text" style="width: 58%;"/></p>
+							<p style="width: 15%;"><span style="width: 50%;">性别:</span><input type="text" style="width: 50%;"/></p>
+							<p style="width: 15%;"><span style="width: 50%;">年龄:</span><input type="text" style="width: 50%;"/></p>
+							<p style="width: 22%;"><span style="width: 40%;">住院号:</span><input type="text" style="width: 60%;"/></p>
+							<p style="width: 16%;"><span style="width: 50%;">病区:</span><input type="text" style="width: 50%;"/></p>
+							<p style="width: 16%;"><span style="width: 42%;">床号:</span><input type="text" style="width: 58%;"/></p>
+						</div>
+						<div>
+							<p style="width: 34%;"><span style="width: 20%;">科别:</span><input type="text" style="width: 80%;"/></p>
+							<p style="width: 26%;"><span style="width: 30%;">费别:</span><input type="text" style="width: 70%;"/></p>
+							<p style="width: 40%;margin-top: 5px;"><span style="width: 20%;">诊断:</span><input type="text" style="width: 80%;"/></p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>
+								<span>患者是否有明显的出血倾向:</span>
+								<input type="text" name="" id="" value="" />
+							</p>
+							<p>
+								<span>患者是否有可能发生血栓的临床表现:</span>
+								<input type="text" name="" id="" value="" />
+							</p>
+							<p>
+								<span>患者目前使用的抗凝、抗血小板药物种类及计量:</span>
+							</p>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="30%">药物分类</th>
+									<th width="30%">剂量</th>
+									<th width="40%">备注</th>
+								</tr>
+								<tr>
+									<td>肝素类</td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+								</tr>
+								<tr>
+									<td>华法林</td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+								</tr>
+								<tr>
+									<td>阿司匹林类</td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+								</tr>
+								<tr>
+									<td>波立维类</td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+								</tr>
+								<tr>
+									<td>其他药物</td>
+									<td contenteditable="true"></td>
+									<td contenteditable="true"></td>
+								</tr>
+							</table>
+							
+						</div>
+					</li>
+					<li>
+						<div>
+							<h4>检验项目：</h4>
+							<div>
+								<h4>普通检测(17项)：</h4>
+								<p>检测凝血功能：凝血因子活性、纤维蛋白原水平、血小板功能</p>
+								<p>血标本要求：枸橼酸抗凝管(蓝盖）一管</p>
+							</div>
+							<div>
+								<p>注:采集血液必须为外周血。严禁从输液管或留置管处采血，避免液体及肝素污染。按采血刻度采满。要求抽取标本后立即充分混匀，并于15分钟内送至输血科实验室。</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—查询条件设定<span>╳</span></h3>
+					<div>
+						<p><span>申请日F：</span><input type="text"/></p>
+						<p><span>申请日T：</span><input type="text"/></p>
+						<p><span>病区：</span><select name=""><option value=""></option></select></p>
+						<p><span>申请科别：</span><select name=""><option value=""></option></select></p>
+						<p><span>申请医生：</span><select name=""><option value=""></option></select></p>
+						<p><span>检验项目：</span><select name=""><option value=""></option></select></p>
+						<p><span>标本状态：</span><select name=""><option value=""></option></select></p>
+						<p><span>结果：</span><select name=""><option value=""></option></select></p>
+						<p><span>完成状态：</span><select name=""><option value=""></option></select></p>	
+						<p><button>退出</button><button>查询</button></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

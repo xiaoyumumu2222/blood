@@ -1,0 +1,64 @@
+#address button{float: right;margin: 7px 40px 0 0;line-height: 0;}
+			.left{width: 27%;margin-left:1.1% ;}
+			.right{width: 70%;margin-right:1.1% ;}
+			.left dl{height: 80px;}
+			.left dl dt,.left dl dd{float: none;width: 100%;}
+			.left dl dt span,.left dl dd span{display: inline-block;width: 20%;text-align: right;}
+			.left dl dt input{width: 30%;}
+			.left dl dd button{margin: -20px 15% 0 0;}
+			.left table{margin-bottom: 20px;margin-left:4%;}
+			.center{width: 34%;margin-left:1% ;float: left;}
+			.right{width: 35%;margin-right:1% ;}
+			.center .d1{width: 100%;margin-top: 0;border: 1px solid #efefef;}
+			.center .d1 div{float: left;width: 50%;}
+			.center .d1 p{margin-bottom: 4px;}
+			.center .d1 div{margin-top: 10px;margin-bottom: 5px;}
+			.center .d1 p span{display: inline-block;width: 35%;text-align: right;}
+			.center .d1 p input{width: 54%;}
+			.right .d2{width: 100%;margin-top: 0;float: left;border: 1px solid #efefef;border-bottom:2px solid #dfdfdf;box-sizing:border-box;display: inline-block;height: 220px;}
+			.right .d2 div{float: left;width: 49%;}
+			.right .d2 p{margin-bottom: 2px;}
+			.right .d2 div{margin: 10px 0;}
+			.right .d2 p span{display: inline-block;width: 35%;text-align: right;}
+			.right .d2 p input{width: 54%;}
+			.right table{width:96%;margin-left:2% ;border: 1px solid #e4e5e7;border-spacing:10px 8px;font-size: 13px;margin-top: 6px;margin-bottom: 10px;clear: both;}
+			.center .d3 button{float: right;margin: 8px 12px 0 0;line-height: 0;text-indent: 0;}
+			.center .d3{width:100%;margin-top: 0;float: left;}
+			.center .d3 ul{margin-top: 5px;height: 28px;width: 94%;clear: both;display: inline-block;border-bottom: 1px solid #eaeaea;}
+			.center .d3 ul li{float: left;margin-left: 1%;height: 28px;line-height: 28px;width: 80px;text-indent: 2%;}
+			.center .d3 ul li.bactive{background: url(../img/receive.png) no-repeat left center;color: white;background-size:100% 100%;}
+			.center .in1 div,.center .in2 div,.center .in4 div{float: left;width: 47%;margin: 15px 0;}
+			.center .in1 p{margin-bottom: 8px;}
+			.center .in1 p span,.center .in2 p span,.center .in4 p span{display: inline-block;width: 35%;text-align: right;}
+			.center .in1 p input,.center .in2 p input,.center .in4 p input{width: 54%;}
+			.center .in2,.center .in3,.center .in4{display: none;}
+			.center .in2 dl:last-child{margin-top: 10px;}
+			.center .in2 dl dt p,.center .in2 dl dd p{margin-top: 6px;}
+			.center .in2 dl:last-child dd{margin-top: -25px;}
+			.center .in3 dl,.center .in2 dl,.center .in4 dl{display: inline-block;width: 100%;float: left;}
+			.center .in3 dl:last-child,.center .in4 dl:last-child{margin-top: 1px;}
+			.center .in3 dl dt,.center .in3 dl dd,.center .in2 dl dt,.center .in2 dl dd,.center .in4 dl dt,.center .in4 dl dd{width: 50%;float: left;}
+			.center .in3 dl dt p span,.center .in2 dl dt p span,.center .in4 dl dt p span{display: inline-block;width: 30%;text-align: right;}
+			.center .in3 dl:first-child dt p input[type="text"],.center .in2 dl:first-child dt p input[type="text"],.center .in4 dl:first-child dt p input[type="text"]{width: 55%;}
+			.center .in3 dl:last-child dt p:nth-child(1) input[type="text"],.center .in2 dl:last-child dt p:nth-child(1) input[type="text"],.center .in4 dl:last-child dt p:nth-child(1) input[type="text"]{width: 26%;}
+			.center .in3 dl:last-child dt p:nth-child(2) input[type="text"],.center .in2 dl:last-child dt p:nth-child(2) input[type="text"],.center .in4 dl:last-child dt p:nth-child(2) input[type="text"]{width: 18%;}
+			.center .in3 dl dd p span,.center .in4 dl dd p span,.center .in4 dl dd p span{display: inline-block;width: 38%;text-align: right;}
+			.center .in3 dl dd p input[type="text"],.center .in2 dl dd p input[type="text"],.center .in4 dl dd p input[type="text"]{width: 28%;}
+			.center .in3 dl:first-child dd p:nth-child(1) input[type="text"],.center .in2 dl:first-child dd p:nth-child(1) input[type="text"],.center .in4 dl:first-child dd p:nth-child(1) input[type="text"]{width: 50%;}
+			.center .in3 dl input[type="radio"],.center .in2 dl input[type="radio"],.center .in4 dl input[type="radio"]{width: 6%;}
+			.center .in3 dl b,.center .in2 dl b,.center .in4 dl b{font-weight: normal;}
+			.center .in3 dl:last-child dd,.center .in4 dl:last-child dd{margin-top: -15px;}
+			.center .in3 dl p,.center .in4 dl p{margin-top: 6px;}
+			.right .d5{width: 100%;font-size: 10px;margin-top: 4px;}
+			.right .d5 table{margin-top: 10px;}
+			.bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 6;}
+			.top{position:fixed;left:0;top:20%;width: 40%;margin: 0 30%;z-index: 7;background: white;}
+			.top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			.top h3 span{float: right;margin-right: 30px;}
+			.top h4{margin-left: 3%;margin-top: 20px;color: #43a8f0;font-size: 15px;}
+			.top dl{width: 100%;margin: 0 auto;display: inline-block;margin-top: 10px;}
+			.top dl dt,.top dl dd{width: 45%;float: left;margin-left: 5%;}
+			.top dl p{margin-bottom: 4px;}
+			.top dl dt p span,.top dl dd p span{display: inline-block;width: 40%;text-align: right;}
+			.top dl dt p input,.top dl dd p input{width: 30%;}
+			.top button{margin-top: 20px;margin-bottom: 30px;float: right;margin-right: 65px;}

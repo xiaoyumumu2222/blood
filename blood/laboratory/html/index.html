@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address button{margin-top: 7px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			#box .left{box-shadow: 2px 2px 4px #CCCCCC;width:32%;margin: 0 1%;float: left;}
+			#box .right{width:64.5%;float: left;box-shadow: 2px 2px 4px #CCCCCC;}
+			#box .left table{width: 86%;margin: 10px 7% 0px 7%;}
+			#box .left table tr{height: 25px;}	
+			#box .left tr:nth-of-type(even){background: white;}
+			#box .left td{border: 1px solid #e5e5e7;}
+			#box .left p{margin-left: 7%;margin-top: 5px;}
+			#box .left p span{margin-right: 20px;}
+			#box .right div{width:600px;margin:0 auto;}
+			#box .right h2{font-size: 18px;font-weight: normal;line-height: 80px;text-indent: 154px;color: #41a7ab;background: url(../img/logo1.png) no-repeat left center;}
+			#box .right h2 span{color: #b7b9b8;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:首页</span></p>
+		<div id="box">
+			<div class="left">
+				<h3>库存信息</h3>
+				<p>
+					库存区分：
+					<span><input type="radio" checked="checked"/>异体血</span>
+					<span><input type="radio" />自体血</span>
+					<span><input type="radio" />药品</span>
+				</p>
+				<div class="l1">
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th>类型</th>
+							<th>血型</th>
+							<th>血袋</th>
+							<th>数量</th>
+							<th>单位</th>
+						</tr>
+						<tr>
+							<td rowspan="4">红细胞</td>
+							<td>A型</td>
+							<td>5</td>
+							<td>4.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>B型</td>
+							<td>14</td>
+							<td>18.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>AB型</td>
+							<td>15</td>
+							<td>23.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>O型</td>
+							<td>16</td>
+							<td>20.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-weight: bold;">合计</td>
+							<td>50</td>
+							<td>20.0</td>
+							<td>u</td>
+						</tr>
+					</table>
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th>类型</th>
+							<th>血型</th>
+							<th>血袋</th>
+							<th>数量</th>
+							<th>单位</th>
+						</tr>
+						<tr>
+							<td rowspan="4">血浆</td>
+							<td>A型</td>
+							<td>4</td>
+							<td>800</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td>B型</td>
+							<td>149</td>
+							<td>18960</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td>AB型</td>
+							<td>208</td>
+							<td>37270</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td>O型</td>
+							<td>122</td>
+							<td>20600</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-weight: bold;">合计</td>
+							<td>483</td>
+							<td>77630</td>
+							<td>ML</td>
+						</tr>
+					</table>
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th>类型</th>
+							<th>血型</th>
+							<th>血袋</th>
+							<th>数量</th>
+							<th>单位</th>
+						</tr>
+						<tr>
+							<td rowspan="4">血小板</td>
+							<td>A型</td>
+							<td>1</td>
+							<td>2.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>B型</td>
+							<td>2</td>
+							<td>4.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>AB型</td>
+							<td>3</td>
+							<td>6.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>O型</td>
+							<td>4</td>
+							<td>8.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-weight: bold;">合计</td>
+							<td>10</td>
+							<td>20.0</td>
+							<td>u</td>
+						</tr>
+					</table>
+				</div>
+				<div class="l2" style="display: none;">
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th>类型</th>
+							<th>血型</th>
+							<th>血袋</th>
+							<th>数量</th>
+							<th>单位</th>
+						</tr>
+						<tr>
+							<td rowspan="4">浓缩红</td>
+							<td>A型</td>
+							<td>5</td>
+							<td>4.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>B型</td>
+							<td>14</td>
+							<td>18.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>AB型</td>
+							<td>15</td>
+							<td>23.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>O型</td>
+							<td>16</td>
+							<td>20.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-weight: bold;">合计</td>
+							<td>50</td>
+							<td>20.0</td>
+							<td>u</td>
+						</tr>
+					</table>
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th>类型</th>
+							<th>血型</th>
+							<th>血袋</th>
+							<th>数量</th>
+							<th>单位</th>
+						</tr>
+						<tr>
+							<td rowspan="4">全血</td>
+							<td>A型</td>
+							<td>4</td>
+							<td>800</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td>B型</td>
+							<td>149</td>
+							<td>18960</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td>AB型</td>
+							<td>208</td>
+							<td>37270</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td>O型</td>
+							<td>122</td>
+							<td>20600</td>
+							<td>ML</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-weight: bold;">合计</td>
+							<td>483</td>
+							<td>77630</td>
+							<td>ML</td>
+						</tr>
+					</table>
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th>类型</th>
+							<th>血型</th>
+							<th>血袋</th>
+							<th>数量</th>
+							<th>单位</th>
+						</tr>
+						<tr>
+							<td rowspan="4">冰冻血小板</td>
+							<td>A型</td>
+							<td>1</td>
+							<td>2.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>B型</td>
+							<td>2</td>
+							<td>4.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>AB型</td>
+							<td>3</td>
+							<td>6.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td>O型</td>
+							<td>4</td>
+							<td>8.0</td>
+							<td>u</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-weight: bold;">合计</td>
+							<td>10</td>
+							<td>20.0</td>
+							<td>u</td>
+						</tr>
+					</table>
+				</div>
+				<div class="l3" style="display: none;">
+					<table border="" cellspacing="" cellpadding="">
+						<tr>
+							<th width="40%">名称</th>
+							<th>数量</th>
+							<th>单位</th>
+						</tr>
+						<tr>
+							<td>凝血酶复原合物</td>
+							<td>4</td>
+							<td>瓶</td>
+						</tr>
+						<tr>
+							<td>凝血因子</td>
+							<td>100</td>
+							<td>瓶</td>
+						</tr>
+						<tr>
+							<td>纤维蛋白原</td>
+							<td>300</td>
+							<td>瓶</td>
+						</tr>
+						<tr>
+							<td style="font-weight: bold;">合计</td>
+							<td>404</td>
+							<td>瓶</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="right">
+				<h3>设备信息</h3>
+				<div>
+					<h2>浙江大学国际医院输血管理系统<span> ——TMIS V2.0</span></h2>
+					<img src="../img/index.png"/>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

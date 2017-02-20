@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/jedate.css"/>
+		<style type="text/css">
+			.left{width: 27%;margin-left:1.1% ;}
+			.left p{margin-top:4px ;}
+			.left p:first-child{margin-top:13px ;}
+			.left p span{display:inline-block;width: 20%;text-align: right;}
+			.left b{display:inline-block;text-indent: 3px;color: #e70019;}
+			.left table{margin-top: 10px;}
+			.right>div{margin-top:10px ;}
+			.right>div p{margin-bottom: 4px;}
+			.right{width: 70%;margin-right:1.1% ;}
+			.right div{width: 98%;}
+			.right>div div{float: left;}
+			.right>div div p{margin-bottom: 10px;}
+			.right>div div:first-child{width: 40%;}
+			.right>div .spe1{width: 30%;}
+			.right>div div:first-child p span{display: inline-block;width: 26%;text-align: right;}
+			.right>div div:first-child p input{width: 34%;}
+			.right div p span{display: inline-block;width: 40%;text-align: right;}
+			.right div p input{width: 52%;}
+			.right>div button{float: right;}
+			.right table{width:96%;margin-left:2% ;border: 1px solid #e4e5e7;border-spacing:10px 8px;font-size: 13px;margin-top: 18px;clear: both;}
+			
+		</style>
+	</head>
+	<body>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js"></script>
+		<script src="../js/common/nwmatcher.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lte IE 8]><script src="../js/common/selectivizr.js"></script><![endif]-->
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'>当前位置:<span>标本送出</span></p>
+		<div id="box">
+			<div class="left">
+				<h3>标本送出</h3>
+				<div>
+					<p><span>工号：</span><input type="text" value="xxx外科"/><b>※扫描工号</b></p>
+					<p><span>标本条码：</span><input type="text" value="李医生"/><b>※扫描标本条码</b></p>
+				</div>
+				<div style="height:1px; margin-top:-1px;clear:both;overflow:hidden;"></div>
+				<div style="width: 100%;height:10px;background: #f5f5f5;clear: both;border-top:2px solid #dfdfdf;margin-top: 18px;"></div>
+				<h3>今日标本送出</h3>
+				<table>
+					<thead>
+						<tr>
+							<th width="15%">NO</th>
+							<th width="20%">姓名</th>
+							<th width="30%">条码号</th>
+							<th width="45%">送出时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>张珊珊</td>
+							<td>A000000004</td>
+							<td>2016/9/26 09:24</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>张珊珊</td>
+							<td>A000000004</td>
+							<td>2016/9/26 09:24</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>张珊珊</td>
+							<td>A000000004</td>
+							<td>2016/9/26 09:24</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>张珊珊</td>
+							<td>A000000004</td>
+							<td>2016/9/26 09:24</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>张珊珊</td>
+							<td>A000000004</td>
+							<td>2016/9/26 09:24</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="right">
+				<h3>标本查询</h3>
+				<div>
+					<div>
+						<p><span>采集日期：</span><input type="text" data-beatpicker="true" id="collectStart"/>--<input type="text" data-beatpicker="true" id="collectEnd"/></p>
+						<p><span>送出日期：</span><input type="text" data-beatpicker="true" id="sendStart"/>--<input type="text" data-beatpicker="true" id="sendEnd"/></p>
+					</div>
+					<div class="spe1">
+						<p><span>患者姓名：</span><input type="text" value="xxx外科"/></p>
+						<p><span>采集者：</span><input type="text" value="李医生"/></p>
+					</div>	
+					<div class="spe1">
+						<p><span>试管条码：</span><input type="text" value="xxx外科"/></p>
+						<p><span>标本状态：</span><input type="text" value="李医生"/></p>
+					</div>
+					<button>查询</button>
+				</div>
+				<div class="clearfix">
+					
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th width="8%">NO</th>
+							<th width="16%">送出时间</th>
+							<th width="15%">条码号</th>
+							<th width="8%">标本状态</th>
+							<th width="8%">患者姓名</th>
+							<th width="11%">采集者</th>
+							<th width="16%">采集时间</th>
+							<th width="11%">送出者</th>
+							<th width="20%">备注</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>已送出</td>
+							<td>张三</td>
+							<td>护士1</td>
+							<td>2016/9/26 09:24</td>
+							<td>护士1</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>已送出</td>
+							<td>张三</td>
+							<td>护士1</td>
+							<td>2016/9/26 09:24</td>
+							<td>护士1</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>已送出</td>
+							<td>张三</td>
+							<td>护士1</td>
+							<td>2016/9/26 09:24</td>
+							<td>护士1</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>已送出</td>
+							<td>张三</td>
+							<td>护士1</td>
+							<td>2016/9/26 09:24</td>
+							<td>护士1</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>已送出</td>
+							<td>张三</td>
+							<td>护士1</td>
+							<td>2016/9/26 09:24</td>
+							<td>护士1</td>
+							<td>重采:A000000004</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+.bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 6;}
+.top{position:fixed;left:0;top:30%;width: 40%;min-width:550px;margin:0 30%;z-index: 7;background: #fff;}
+.top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+.top h3 span{float: right;margin-right: 30px;}
+.top .left{width: 50%;margin: 0;border: none;}
+.top .right{width:50%;margin:0 ;margin-bottom: 20px;border: none;padding-left:5% ;box-sizing: border-box;}
+.top .left table{width: 70%;margin: 30px 15% 60px 15%;}
+.top .left table tr:nth-of-type(odd){background: #f4f9fd;}
+.top .left table tr:nth-of-type(even){background: none;}
+.top .right h4{margin-top: 22px;margin-bottom: 10px;font-size: 15px;}
+.top .right p{line-height: 24px;}

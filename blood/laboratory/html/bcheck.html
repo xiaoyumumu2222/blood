@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address button{margin-top: 4px;margin-left: 10px;color: #666666;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			#box .b1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box div{background: white;display: inline-block;width: 100%;}
+			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width:98%;margin: 0 1%;}
+			#box .b1 table{width: 97%;margin: 10px 20px auto ;}
+			#box .b1 tr:nth-of-type(odd){background: #f4f9fd;}
+			#box .b1 tr:nth-of-type(even){background: white;}
+			#box .b1 div{margin-left: 1.5%;width: 80%;margin-top: 10px;}
+			#box .b1 div select{height: 24px;}
+			#box .b2{box-shadow: 2px 2px 4px #CCCCCC;width: 98%;margin: 0 1%;margin-top: 10px;}
+			#box .b2 table{width: 60%;margin: 10px 5% 20px 1%;float: left;}	
+			#box .b2 table tr:first-child th{background: #45a7f2;color: white;border-right:3px double white ;}
+			#box .b2 table tr:first-child th:last-child{border-right:1px solid #dee5ed ;}
+			#box .b2 table tr th{border-right:1px solid #dee5ed ;}
+			#box .b2 table tr th:first-child,#box .b2 table tr th:nth-child(5),#box .b2 table tr th:nth-child(7),#box .b2 table tr th:nth-child(9),#box .b2 table tr th:nth-child(11){border-right: 3px double #dee5ed;}
+			#box .b2 table tr td:first-child,#box .b2 table tr td:nth-child(5),#box .b2 table tr td:nth-child(7),#box .b2 table tr td:nth-child(9),#box .b2 table tr td:nth-child(11){border-right: 3px double #e5e5e7;}
+			#box .b2 tr:nth-of-type(even){background: white;}
+			#box .b2 td{border: 1px solid #e5e5e7;}
+			#box .b2 p{margin-top: 184px;font-weight: bold;}
+			#box .b2 p span{font-weight: normal;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:30%;width: 22%;min-width:200px;margin:0 39%;z-index: 11;background: #fff;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top div{margin-top: 10px;}
+			#shade .top div p{line-height: 28px;}
+			#shade .top div p:last-child{width: 78%;float: right;margin:14px 22% 20px 0;}
+			#shade .top div p:last-child button{float: right;margin-left: 20px;}
+			#shade .top div p span{display: inline-block;width: 34%;text-align: right;}
+			#shade .top div p select{width:36%;height: 22px;}
+			#shade .top div p input{width:43%;height: 20px;}
+			#shade1 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade1 .top{position:fixed;left:0;top:20%;width: 42%;min-width:200px;margin:0 29%;z-index: 11;background: #fff;}
+			#shade1 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade1 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade1 .top div{margin-top: 10px;width: 90%;padding: 0 5%;}
+			#shade1 .top div p{margin-top: 10px;float: left;}
+			#shade1 .top div p select{width: 140px;height: 22px;}
+			#shade1 .top div .p2,#shade1 .top div .p3{float: right;}
+			#shade1 .top div p button{float: right;margin-left: 15px;}
+			#shade1 .top div table{width: 100%;margin: 5px 0 40px 0;}
+			#shade2 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade2 .top{position:fixed;left:0;top:10%;width: 50%;min-width:200px;margin:0 25%;z-index: 11;background: #F5F5F5;}
+			#shade2 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade2 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade2 .t1{width: 57%;float: left;box-shadow: 2px 2px 4px #CCCCCC;margin-left: 2%;margin-top: 10px;}
+			#shade2 .t2{width: 37%;float: right;box-shadow: 2px 2px 4px #CCCCCC;margin-right: 2%;margin-top: 10px;}
+			#shade2 .t3{width: 96%;box-shadow: 2px 2px 4px #CCCCCC;margin: 10px 2% 20px;}
+			#shade2 .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t3 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t1 div{float: left;width: 50%;padding-bottom: 10px;}
+			#shade2 .t1 .tt1{float: left;width: 100%;padding-bottom: 0;margin-top: 10px;}
+			#shade2 .t1 .tt1 span{display: inline-block;width: 20%;text-align: right;}
+			#shade2 .t1 .tt1 input{width:25%;height: 20px;}
+			#shade2 .t1 .tt1 b{color: #d90017;}
+			#shade2 .t1 p button{float: right;margin-right:10% ;margin-top: 26px;}
+			#shade2 .top div p{line-height: 28px;}
+			#shade2 .top div p span{display: inline-block;width: 40%;text-align: right;}
+			#shade2 .top div p input{width:50%;height: 20px;}
+			#shade2 .t2 table{width: 90%;margin: 10px 5% 15px;}
+			#shade2 .t3 table{width: 94%;margin: 10px 3% 15px;}
+			#shade3 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade3 .top{position:fixed;left:0;top:2%;width: 60%;min-width:200px;margin:0 20%;z-index: 11;background: #F5F5F5;padding-bottom: 20px;}
+			#shade3 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade3 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade3 .t1,#shade3 .t2,#shade3 .t3{width: 33%;float: left;box-shadow: 2px 2px 4px #CCCCCC;margin-left: 2%;margin-top: 10px;}
+			#shade3 .t1{width: 26%;}
+			#shade3 .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade3 .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade3 .t3 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade3 .t4 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade3 .top div p{line-height: 28px;}
+			#shade3 .top div p span{display: inline-block;width: 50%;text-align: right;}
+			#shade3 .top div p select{width:40%;height: 22px;}
+			#shade3 .t1 div{margin-top: 10px;}
+			#shade3 .t1 div p span{display: inline-block;width: 38%;text-align: right;}
+			#shade3 .t1 div p input{width:50%;height: 20px;}
+			#shade3 .t1 div p button{margin: 10px 10% 15px 0px;float: right;}
+			#shade3 .t2 div{margin-top: 10px;}
+			#shade3 .t2 table{width: 90%;margin: 10px 5% 15px;}
+			#shade3 .t3 table{width: 90%;margin: 10px 5% 20px;}
+			#shade3 .t3 table tr{background: white;}
+			#shade3 .t3 table td{border:1px solid #e4e5e7 ;}
+			#shade3 .t3 table td:first-child{background: #e5f2fb;font-weight: bold;}
+			#shade3 .t3 div p span{display: inline-block;width: 42%;text-align: right;}
+			#shade3 .t3 div:last-child{text-align: center;}
+			#shade3 .t3 div:last-child button{margin-left: 2%;margin-top: 15px;}
+			#shade3 .t4{width: 96%;margin: 10px 2% 0px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade3 .t4 table{width: 96%;margin: 10px 2% 10px;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bout.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:标本检测</span><button>结果录入</button><button>设备读取</button><button>查询</button><button>删除</button><button>列表打印</button><button>报告审核</button><button>取消审核</button><button>报告打印</button></p>
+		<div id="box">
+			<div class="b1">
+				<h3>出库异体血信息列表</h3>
+				<div>
+					<span>检验项目：</span>
+					<select name="">
+						<option value="">全部</option>
+						<option value="">血型检测</option>
+						<option value="">不规则抗筛</option>
+						<option value="">血小板抗筛</option>
+						<option value="">commbs检测</option>
+						
+					</select>
+				</div>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th width="6%">选择</th>
+						<th width="12%">登记日期</th>
+						<th width="10%">条码号</th>
+						<th width="10%">病历号</th>
+						<th width="7%">在院方式</th>
+						<th width="7%">姓名</th>
+						<th width="7%">正定型</th>
+						<th width="7%">反定型</th>
+						<th width="7%">RH血型</th>
+						<th width="7%">RH表型</th>
+						<th width="7%">检测者</th>
+						<th width="7%">不规则抗筛</th>
+						<th width="7%">检测者</th>
+						<th width="7%">血小板抗筛</th>
+						<th width="7%">检测者</th>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>A32234343</td>
+						<td>17591500</td>
+						<td>住院</td>
+						<td>xxxx</td>
+						<td>A型</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>xxxx</td>
+						<td>1+</td>
+						<td>xxx</td>
+						<td>1+</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>A32234343</td>
+						<td>17591500</td>
+						<td>住院</td>
+						<td>xxxx</td>
+						<td>A型</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>xxxx</td>
+						<td>1+</td>
+						<td>xxx</td>
+						<td>1+</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>A32234343</td>
+						<td>17591500</td>
+						<td>住院</td>
+						<td>xxxx</td>
+						<td>A型</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>xxxx</td>
+						<td>1+</td>
+						<td>xxx</td>
+						<td>1+</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>A32234343</td>
+						<td>17591500</td>
+						<td>住院</td>
+						<td>xxxx</td>
+						<td>A型</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>xxxx</td>
+						<td>1+</td>
+						<td>xxx</td>
+						<td>1+</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>A32234343</td>
+						<td>17591500</td>
+						<td>住院</td>
+						<td>xxxx</td>
+						<td>A型</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>xxxx</td>
+						<td>1+</td>
+						<td>xxx</td>
+						<td>1+</td>
+						<td>xxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"/></td>
+						<td>2016/9/27 09:11</td>
+						<td>A32234343</td>
+						<td>17591500</td>
+						<td>住院</td>
+						<td>xxxx</td>
+						<td>A型</td>
+						<td>A型</td>
+						<td>阳性(+)</td>
+						<td>CcEe</td>
+						<td>xxxx</td>
+						<td>1+</td>
+						<td>xxx</td>
+						<td>1+</td>
+						<td>xxxx</td>
+					</tr>
+				</table>
+			</div>
+			<div class="b2">
+				<h3>出库血袋合计</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th>类型</th>
+						<th colspan="4" >血型检测</th>
+						<th colspan="2" >不规则抗筛</th>
+						<th colspan="2" >血小板抗筛</th>
+						<th colspan="2" >Coombs(C3)结果</th>
+						<th colspan="2" >Coombs(lgG)结果</th>
+					</tr>
+					<tr>
+						<th>申请科别</th>
+						<th>A型</th>
+						<th>B型</th>
+						<th>AB型</th>
+						<th>O型</th>
+						<th>阴性(-)</th>
+						<th>阳性(+)</th>
+						<th>阴性(-)</th>
+						<th>阳性(+)</th>
+						<th>阴性(-)</th>
+						<th>阳性(+)</th>
+						<th>阴性(-)</th>
+						<th>阳性(+)</th>
+					</tr>
+					<tr>
+						<td>神经外科</td>
+						<td>3</td>
+						<td>3</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>泌尿外科</td>
+						<td>3</td>
+						<td>3</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>产科</td>
+						<td>3</td>
+						<td>3</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>合计</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+						<td>33</td>
+					</tr>
+				</table>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—查询条件设定<span>╳</span></h3>
+					<div>
+						<p><span>检测日F：</span><input type="text"/></p>
+						<p><span>检测日T：</span><input type="text"/></p>
+						<p><span>申请科别：</span><select name=""><option value=""></option></select></p>
+						<p><span>ABO正定：</span><select name=""><option value=""></option></select></p>
+						<p><span>ABO反定：</span><select name=""><option value=""></option></select></p>
+						<p><span>RH血型：</span><select name=""><option value=""></option></select></p>
+						<p><span>RH表型：</span><select name=""><option value=""></option></select></p>
+						<p><span>不规则抗筛：</span><select name=""><option value=""></option></select></p>
+						<p><span>血小板抗筛：</span><select name=""><option value=""></option></select></p>
+						<p><span>Coombs1：</span><select name=""><option value=""></option></select></p>
+						<p><span>Coombs2：</span><select name=""><option value=""></option></select></p>
+						<p><span>审核状态：</span><select name=""><option value=""></option></select></p>
+						<p><button>退出</button><button>查询</button></p>
+					</div>
+				</div>
+			</div>
+			<div id="shade1" style="display: block;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—设备读取<span>╳</span></h3>
+					<div>
+						<p class="p1"><span>检验项目：</span><select name=""><option value="">血型检测</option><option value="">不规则抗筛</option><option value="">血小板抗筛</option><option value="">Coombs检测</option></select></p>
+						<p class="p2"><span>仪器ID：</span><select name=""><option value=""></option></select></p>
+						<p class="p3"><button>退出</button><button>保存</button><button>读取</button></p>
+					</div>
+					<div>
+						<table border="" cellspacing="" cellpadding="">
+							<tr>
+								<th width="4%">NO</th>
+								<th width="12%">检测日期</th>
+								<th width="8%">条码号</th>
+								<th width="7%">患者姓名</th>
+								<th width="5%">正定型</th>
+								<th width="7%">反定型</th>
+								<th width="8%">RH血型</th>
+								<th width="6%">RH表型</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="shade2" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—设备读取<span>╳</span></h3>
+					<div class="t1">
+						<h3>患者基本信息</h3>
+						<div class="tt1">
+							<p><span>病历号：</span><input type="text"/><b> 在此扫描病历号</b></p>
+						</div>
+						<div>
+							<p><span>患者姓名：</span><input type="text"/></p>
+							<p><span>性别：</span><input type="text"/></p>
+							<p><span>年龄：</span><input type="text"/></p>
+							<p><span>电话：</span><input type="text"/></p>
+							<p><span>科室：</span><input type="text"/></p>
+						</div>
+						<div>
+							<p><span>病区：</span><input type="text"/></p>
+							<p><span>床位号：</span><input type="text"/></p>
+							<p><span>住院号：</span><input type="text"/></p>
+							<p><button>退出</button></p>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>血型历史记录</h3>
+						<table border="" cellspacing="" cellpadding="">
+							<tr>
+								<th width="50%">检测日期</th>
+								<th width="25%">ABO血型</th>
+								<th width="25%">RH血型</th>
+							</tr>
+							<tr>
+								<td>2016/9/27 09:11</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+							</tr>
+							<tr>
+								<td>2016/9/27 09:11</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+							</tr>
+							<tr>
+								<td>2016/9/27 09:11</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+							</tr>
+							<tr>
+								<td>2016/9/27 09:11</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+							</tr>
+						</table>
+					</div>
+					<div class="t3">
+						<h3>检验科历史记录</h3>
+						<table border="" cellspacing="" cellpadding="">
+							<tr>
+								<th width="4%">NO</th>
+								<th width="12%">检测日期</th>
+								<th width="8%">条码号</th>
+								<th width="7%">患者姓名</th>
+								<th width="5%">正定型</th>
+								<th width="7%">反定型</th>
+								<th width="8%">RH血型</th>
+								<th width="6%">RH表型</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A21234343</td>
+								<td>xxx</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="shade3" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—设备读取<span>╳</span></h3>
+					<div class="t1">
+						<h3>检验科检测结果</h3>
+						<div>
+							<p><span>标本条码：</span><input type="text"/></p>
+							<p><span>病历号：</span><input type="text"/></p>
+							<p><span>患者姓名：</span><input type="text"/></p>
+							<p><span>性别：</span><input type="text"/></p>
+							<p><span>年龄：</span><input type="text"/></p>
+							<p><span>ABO血型：</span><input type="text"/></p>
+							<p><span>RH血型：</span><input type="text"/></p>
+							<p><button>保存</button><button>检验历史信息</button></p>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>输血科检查结果</h3>
+						<div>
+							<p><span>ABO正定：</span><select name=""><option value="">A型</option></select></p>
+							<p><span>ABO反定：</span><select name=""><option value="">A型</option></select></p>
+							<p><span>RH(D)血型：</span><select name=""><option value="">阳性(+)</option></select></p>
+							<p><span>RH表型：</span><select name=""><option value="">CcEe</option></select></p>
+							<p><span>不规则抗筛凝集强度：</span><select name=""><option value="">——</option></select></p>
+							<p><span>血小板抗筛凝集强度：</span><select name=""><option value="">2+</option></select></p>
+							<p><span>Coombs(C3)结果：</span><select name=""><option value=""></option></select></p>
+							<p><span>Coombs(lgG)结果：</span><select name=""><option value=""></option></select></p>
+						</div>
+					</div>
+					<div class="t3">
+						<h3>标本审核结果</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<td width="48%">血型检测</td>
+									<td>已审核</td>
+									<td>审核医生</td>
+								</tr>
+								<tr>
+									<td>不规则检测</td>
+									<td>未审核</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>血小板抗筛</td>
+									<td>未审核</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Coombs检测</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<div>
+							<p><span>检验项目：</span><select name=""><option value="">血型检测</option></select></p>
+						</div>
+						<div>
+							<button>标本审核</button>
+							<button>取消审核</button>
+							<button>报告打印</button>
+						</div>
+					</div>
+					<div class="t4">
+						<h3>血型鉴定历史记录</h3>
+						<table border="" cellspacing="" cellpadding="" style="display: none;">
+							<tr>
+								<th width="4%">NO</th>
+								<th width="12%">检测日期</th>
+								<th width="8%">正定型</th>
+								<th width="7%">反定型</th>
+								<th width="5%">RH(D)</th>
+								<th width="7%">RH分型</th>
+								<th width="8%">检测者</th>
+								<th width="12%">审核日期</th>
+								<th width="6%">审核者</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>A型</td>
+								<td>A型</td>
+								<td>阳性(+)</td>
+								<td>CcEe</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+						</table>
+					</div>
+					<div class="t4">
+						<h3>不规则抗筛历史记录</h3>
+						<table border="" cellspacing="" cellpadding="" style="display: none;">
+							<tr>
+								<th width="4%">NO</th>
+								<th width="12%">检测日期</th>
+								<th width="8%">抗筛结果</th>
+								<th width="7%">凝集强度</th>
+								<th width="8%">检测者</th>
+								<th width="12%">审核日期</th>
+								<th width="6%">审核者</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阳性(+)</td>
+								<td>1+</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阳性(+)</td>
+								<td>1+</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阳性(+)</td>
+								<td>1+</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+						</table>
+					</div>
+					<div class="t4">
+						<h3>血小板抗筛历史记录</h3>
+						<table border="" cellspacing="" cellpadding="" style="display: none;">
+							<tr>
+								<th width="4%">NO</th>
+								<th width="12%">检测日期</th>
+								<th width="8%">抗筛结果</th>
+								<th width="7%">凝集强度</th>
+								<th width="8%">检测者</th>
+								<th width="12%">审核日期</th>
+								<th width="6%">审核者</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阳性(+)</td>
+								<td>1+</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阳性(+)</td>
+								<td>1+</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阳性(+)</td>
+								<td>1+</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+						</table>
+					</div>
+					<div class="t4">
+						<h3>Coombs检测历史记录</h3>
+						<table border="" cellspacing="" cellpadding="" style="display: block;">
+							<tr>
+								<th width="6%">NO</th>
+								<th width="12%">检测日期</th>
+								<th width="10%">Coombs(C3)结果</th>
+								<th width="10%">Coombs(lgG)结果</th>
+								<th width="8%">检测者</th>
+								<th width="12%">审核日期</th>
+								<th width="6%">审核者</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阴性(-)</td>
+								<td>阴性(-)</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阴性(-)</td>
+								<td>阴性(-)</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2016/9/27 09:11</td>
+								<td>阴性(-)</td>
+								<td>阴性(-)</td>
+								<td>xxx</td>
+								<td>2016/9/27 09:11</td>
+								<td>xxx</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

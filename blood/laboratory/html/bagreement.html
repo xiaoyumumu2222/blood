@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address button{margin-top: 4px;margin-left: 10px;color: #666666;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box div{background: white;display: inline-block;width: 100%;}
+			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width: 98%;margin: 0 1%;}
+			#box .b1 table{width: 97%;margin: 20px auto;}
+			#box .b1 tr:nth-of-type(odd){background: #f4f9fd;}
+			#box .b1 tr:nth-of-type(even){background: white;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:输血同意书管理</span><button>结果录入</button><button>查询</button><button>列表打印</button></p>
+		<div id="box">
+			<div class="b1">
+				<h3>临床已签输血同意书列表</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th width="4%">NO</th>
+						<th width="8%">签署日期</th>
+						<th width="8%">同意书单号</th>
+						<th width="8%">病历号</th>
+						<th width="4%">姓名</th>
+						<th width="4%">年龄</th>
+						<th width="4%">性别</th>
+						<th width="5%">ABO血型</th>
+						<th width="10%">申请种类及用量</th>
+						<th width="8%">申请科别</th>
+						<th width="6%">申请医生</th>
+						<th width="6%">确认状态</th>
+						<th width="6%">确认者</th>
+						<th width="8%">确认日期</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2016/9/27 09:11</td>
+						<td>Z1234567</td>
+						<td>1112222</td>
+						<td>王五</td>
+						<td>31</td>
+						<td>男</td>
+						<td>A型</td>
+						<td>悬浮红细胞2u;血浆400ml</td>
+						<td>神经外科</td>
+						<td>神医1</td>
+						<td>未确认</td>
+						<td>神医1</td>
+						<td>2016/9/27 09:11</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

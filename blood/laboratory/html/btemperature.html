@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>-->
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address button{margin-top: 7px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box div{background: white;display: inline-block;width: 100%;}
+			#box .left table{width: 97%;margin: 20px auto;}
+			#box .left tr:nth-of-type(odd){background: #f4f9fd;}
+			#box .left tr:nth-of-type(even){background: white;}
+			#box .left{box-shadow: 2px 2px 4px #CCCCCC;width:32%;margin: 0 1%;float: left;}
+			#box .right{width:64.5%;float: left;background: #F5F5F5;}
+			#box .right .r1{float: left;width: 100%;margin-top: 0;box-shadow: 2px 2px 4px #CCCCCC;}
+			#box .right .r2{float: left;width: 100%;box-shadow: 2px 2px 4px #CCCCCC;margin-top: 10px;}
+			#box .right .r1 div{float: left;width: 40%;margin-bottom: 20px;}
+			#box .right .r1 p{margin-top: 10px;width: 100%;}
+			#box .right .r1 span{width: 30%;display: inline-block;text-align: right;}
+			#box .right .r1 input{width: 45%;}
+			#box .right .r1 textarea{width: 45%;vertical-align: top;height: 55px;}
+			#box .right .r2 p{line-height: 60px;width: 100%;}
+			#box .right .r2 p span{margin-right: 30px;}
+			#box .right .r2 p span:nth-child(1){color: #e80011;margin-right: 0;margin-left: 35px;}
+			#box .right .r2 p button{margin-left: 20px;}
+			#container1 table{width: 100%;}
+			#container1 table select{width: 60%;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/highcharts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/btemperature.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:标本查询管理</span></p>
+		<div id="box">
+			<div class="left">
+				<h3>标本信息列表</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th width="14%">选择</th>
+						<th>编号</th>
+						<th>区分</th>
+						<th width="25%">设备名称</th>
+						<th>温度(℃)</th>
+						<th>状态</th>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr><tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+					<tr>
+						<td><input type="radio"/></td>
+						<td>0001</td>
+						<td>冷藏</td>
+						<td>红细胞冷藏1号柜</td>
+						<td>5</td>
+						<td>正常</td>
+					</tr>
+				</table>
+			</div>
+			<div class="right">
+				<div class="r1">
+					<h3>设备信息</h3>
+					<div>
+						<p><span>设备名称：</span><input type="text" disabled="disabled" value="红细胞冷藏一号柜"/></p>
+						<p><span>设备区分：</span><input type="text" disabled="disabled" value="冷藏"/></p>
+					</div>
+					<div>
+						<p><span>备注：</span><textarea disabled="disabled">xxxx</textarea></p>
+					</div>
+				</div>
+				<div class="r2">
+					<h3>温控信息</h3>
+					<p><span>温控日期：</span><span>2016年09月16日</span><span>参考标准：4±2℃</span><span><input type="radio" checked="checked"/>实时走势图</span><span><input type="radio"/>实时数据图</span><button>打印</button><button>保存</button></p>
+					<div class="rr2">
+						<div id="container" style="width:700px;margin-left: 5%;display: block;"></div>
+						<div id="container1" style="width:700px;margin-left: 5%;display: none;">
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="30%">日期时间</th>
+									<th width="15%">温度(℃)</th>
+									<th width="15%">状态</th>
+									<th width="40%">备注(异常原因)</th>
+								</tr>
+								<tr>
+									<td>2016/09/16 00:00</td>
+									<td>1</td>
+									<td>异常</td>
+									<td><select><option>冷柜消毒</option></select></td>
+								</tr>
+								<tr>
+									<td>2016/09/16 00:00</td>
+									<td>1</td>
+									<td>异常</td>
+									<td><select><option>冷柜消毒</option></select></td>
+								</tr>
+								<tr>
+									<td>2016/09/16 00:00</td>
+									<td>1</td>
+									<td>异常</td>
+									<td><select><option>冷柜消毒</option></select></td>
+								</tr>
+								<tr>
+									<td>2016/09/16 00:00</td>
+									<td>1</td>
+									<td>异常</td>
+									<td><select><option>冷柜消毒</option></select></td>
+								</tr>
+								<tr>
+									<td>2016/09/16 00:00</td>
+									<td>1</td>
+									<td>异常</td>
+									<td><select><option>冷柜消毒</option></select></td>
+								</tr>
+								<tr>
+									<td>2016/09/16 00:00</td>
+									<td>1</td>
+									<td>异常</td>
+									<td><select><option>冷柜消毒</option></select></td>
+								</tr>
+								<tr>
+									<td>2016/09/16 00:00</td>
+									<td>1</td>
+									<td>异常</td>
+									<td><select><option>冷柜消毒</option></select></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+document.writeln("		<div id=\'hfoot\'>");
+document.writeln("		</div>");
+document.writeln("<div class=\'footer\'>");
+document.writeln("	 <div id=\'fleft\'>");
+document.writeln("	 	<p>Copyright&copy;2013-2014树兰医疗版权所有·浙ICP备14037640号</p>");
+document.writeln("		<p>地址：杭州市下城区东新路848号</p>");
+document.writeln("	 </div>");
+document.writeln("	<p>&copy;2016-杭州同烁信息技术有限公司</p>");
+document.writeln("	<p>&copy;同软资格C29793号</p>");
+document.writeln("</div>");

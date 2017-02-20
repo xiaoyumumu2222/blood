@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#address{z-index: 4;}
+			#address button{margin-top: 4px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
+			#address span{float: right;margin-right: 40px;}
+			.left{width: 48.5%;box-shadow:0px 2px 4px #CCCCCC;}
+			.right{width: 48.5%;box-shadow:0px 2px 4px #CCCCCC;}
+			.right div p input{width: 53%;}
+			.left table{margin-top:10px ;}
+			.left tr:nth-of-type(even){background: #fff;}
+			.left tr:nth-of-type(odd){background: #f4f9fd;}
+			.right div{width: 94%;}
+			.header1{height:80px;margin: 0 3%;border-bottom:2px solid black ;clear: both;display: inline-block;width: 100%;position: relative;}
+			.header1 div:first-child{position: absolute;left: 0;top: 38px;}
+			.header1 div:last-child{width: 22%;position: absolute;right: 0;top: 0px;}
+			.header1 div:last-child span{width: 41%;}
+			.header1 div:nth-child(2){width:100%;text-align: center;line-height: 80px;}
+			.right input[type="text"]{border: none;border-bottom:1px solid black;text-indent: 5px;}
+			.right select{border: none;border-bottom:1px solid black ;}
+			.header1 input{border: none;border-bottom:1px solid black ;width: 14%;text-indent: 5px;font-weight: bold;}
+			.header1 div p:first-child input{height: 26px;vertical-align: bottom;font-size: 20px;}
+			.header1 span{display: inline-block;width:86%;text-align: right;}
+			.header1 img{width: 15%;height: 25px;}
+			.right ul{margin: 0 3%;}
+			.right>ul>li{border-bottom: 2px solid #000000;clear: both;display: inline-block;padding:20px 0;width: 100%;}
+			.right ul li:last-child{border: none;}
+			.right ul li:nth-child(1) div p{float: left;}
+			.right ul li:nth-child(1) div p span{display: inline-block;text-align: right;font-weight:bold ;}
+			.right ul li:nth-child(1) div:last-child{clear: both;}
+			.right ul li:nth-child(2) div p{float: left;}
+			.right ul li:nth-child(2) div{width: 92%;display: inline-block;float: left;}
+			.right ul li:nth-child(2) div:first-child{width: 7%;margin-right: 1%;font-weight:bold ;}
+			.right ul li:nth-child(2) div:first-child p{text-align: right;width: 100%;margin-bottom: 15px;}
+			.right ul li:nth-child(2) div:nth-child(2) p,.right ul li:nth-child(2) div:nth-child(3) p{float: left;width: 32%;}
+			.right ul li:nth-child(2) div:nth-child(2) p span,.right ul li:nth-child(2) div:nth-child(3) p span{display: inline-block;text-align: right;width: 47%;font-weight:bold ;}
+			.right ul li:nth-child(2) div:nth-child(2) p input,.right ul li:nth-child(2) div:nth-child(3) p input{width: 46%;}
+			.right ul li:nth-child(3) div p{float: left;width: 70%;}
+			.right ul li:nth-child(3) div p span{display: inline-block;text-align: right;font-weight:bold ;margin-left: 3%;}
+			.right ul li:nth-child(3) div p input{display: inline-block;width: 80%;}
+			.right ul li:nth-child(4)>div p{float: left;width: 50%;}
+			.right ul li:nth-child(4)>div p span{width: 60%;display: inline-block;text-align: right;}
+			.right ul li:nth-child(4)>div p input{width: 40%;}
+			.right ul li:nth-child(4)>div p:last-child{float: right;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:30%;width: 22%;min-width:200px;margin:0 39%;z-index: 11;background: #fff;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top div{margin-top: 10px;}
+			#shade .top div p{line-height: 28px;}
+			#shade .top div p:last-child{width: 78%;float: right;margin:14px 22% 20px 0;}
+			#shade .top div p:last-child button{float: right;margin-left: 20px;}
+			#shade .top div p span{display: inline-block;width: 34%;text-align: right;}
+			#shade .top div p select{width:36%;height: 22px;}
+			#shade .top div p input{width:43%;height: 20px;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'><span>当前位置:单采治疗申请</span><button>查询</button><button>列表打印</button><button>申请单打印</button></p>
+		<div id="box">
+			<div class="left">
+				<h3>其他检验申请</h3>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th width="10%">选择</th>
+						<th width="10%">完成状态</th>
+						<th width="10%">方式</th>
+						<th width="10%">姓名</th>
+						<th width="10%">年龄</th>
+						<th width="10%">性别</th>
+						<th width="10%">病区</th>
+						<th width="22%">申请检测</th>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>xxxxxxxxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>xxxxxxxxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>xxxxxxxxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>新生儿溶血筛查</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>新生儿溶血筛查</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>新生儿溶血筛查</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>新生儿溶血筛查</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>xxxxxxxxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>xxxxxxxxxx</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>未完成</td>
+						<td>住院</td>
+						<td>张三</td>
+						<td>31</td>
+						<td>男</td>
+						<td>13</td>
+						<td>xxxxxxxxxx</td>
+					</tr>
+				</table>
+			</div>
+			<div class="right">
+				<h3>其他检验申请详细</h3>
+				<div class="header1">
+					<div>
+						<p>00000000000</p><img src="../img/1.png" />
+					</div>
+					<div>
+						<h2>XXXXX医院治疗性单采申请单</h2>
+					</div>
+					<div>
+						<p><span>ABO血型:</span><input type="text" value="A型" /></p>
+						<p><span>RH血型:</span><input type="text" value="阳性" /></p>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p style="width: 16%;"><span style="width: 42%;">姓名:</span><input type="text" style="width: 58%;"/></p>
+							<p style="width: 15%;"><span style="width: 50%;">性别:</span><input type="text" style="width: 50%;"/></p>
+							<p style="width: 15%;"><span style="width: 50%;">年龄:</span><input type="text" style="width: 50%;"/></p>
+							<p style="width: 22%;"><span style="width: 40%;">住院号:</span><input type="text" style="width: 60%;"/></p>
+							<p style="width: 16%;"><span style="width: 50%;">病区:</span><input type="text" style="width: 50%;"/></p>
+							<p style="width: 16%;"><span style="width: 42%;">床号:</span><input type="text" style="width: 58%;"/></p>
+						</div>
+						<div>
+							<p style="width: 16%;"><span style="width: 42%;">身高:</span><input type="text" style="width: 58%;"/></p>
+							<p style="width: 20%;"><span style="width: 38%;">体重:</span><input type="text" style="width: 62%;"/></p>
+							<p style="width: 22%;"><span style="width: 40%;">血压:</span><input type="text" style="width: 60%;"/></p>
+							<p style="width: 22%;"><span style="width: 40%;">呼吸:</span><input type="text" style="width: 60%;"/></p>
+							<p style="width: 20%;"><span style="width: 40%;">脉搏:</span><input type="text" style="width: 60%;"/></p>
+							<p style="width: 16%;"><span style="width: 42%;">科别:</span><input type="text" style="width: 58%;"/></p>
+							<p style="width: 16%;"><span style="width: 42%;">费别:</span><input type="text" style="width: 58%;"/></p>
+						</div>
+						<div>
+							<p style="width: 55%;margin-top: 5px;"><span style="width: 12%;">诊断:</span><input type="text" style="width: 68%;"/></p>
+							<p style="width: 45%;margin-top: 5px;"><span style="width: 30%;">手术日期:</span><input type="text" style="width: 70%;"/></p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>检验:</p>
+						</div>
+						<div>
+							<p><span>WBC(G/L):</span><input type="text" /></p>
+							<p><span>RBC(T/L):</span><input type="text" /></p>
+							<p><span>HGB(g/L):</span><input type="text" /></p>
+						</div>
+						<div>
+							<p><span>HCT(%):</span><input type="text" /></p>
+							<p><span>PLT(G/L):</span><input type="text" /></p>
+							<p><span>血钙(mmom):</span><input type="text" /></p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>
+								<span>检验项目:</span>
+								<input type="text" name="" id="" value="" />
+							</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p><span>申请医师(主管医师)签字:</span><input type="text" /></p>
+							<p><span>日期:</span><input type="text" /></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—查询条件设定<span>╳</span></h3>
+					<div>
+						<p><span>申请日F：</span><input type="text"/></p>
+						<p><span>申请日T：</span><input type="text"/></p>
+						<p><span>病区：</span><select name=""><option value=""></option></select></p>
+						<p><span>申请科别：</span><select name=""><option value=""></option></select></p>
+						<p><span>申请医生：</span><select name=""><option value=""></option></select></p>
+						<p><span>标本状态：</span><select name=""><option value=""></option></select></p>
+						<p><span>完成状态：</span><select name=""><option value=""></option></select></p>
+						<p><button>退出</button><button>查询</button></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

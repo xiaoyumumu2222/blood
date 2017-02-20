@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/jedate.css"/>
+		<style type="text/css">
+			.left{width: 27%;margin-left:1.1% ;}
+			.right{width: 70%;margin-right:1.1% ;}
+			.left dl{height: 106px;}
+			.left dl dt,.left dl dd{float: none;width: 100%;}
+			.left dl dt span,.left dl dd span{display: inline-block;width: 20%;text-align: right;}
+			.left dl dt input{width: 30%;}
+			.left dl dd button{margin: -20px 15% 0 0;}
+			.left table{margin-bottom: 20px;margin-left:4%}
+			.left dl dd button{margin: -20px 4.6% 0 0;}
+			.right dl dt span,.right dl dd span{display: inline-block;width: 20%;text-align: right;}
+			.right>dl{padding-bottom:16px ;clear: both;display: inline-block;width: 100%;}
+			.right dl dt,.right dl dd{float: left;}
+			.right>dl>dt{width: 40%;}
+			.right>dl>dd{width: 60%;}
+			.right>dl>dd dt{width:50%}
+			.right>dl>dd dd{width:50%}
+			.right dl dt p,.right dl dd p{margin-top:4px ;}
+			.right dl dt p:first-child,.right dl dd p:first-child{margin-top:13px ;}
+			.right dl>dt p input{width: 40%;}
+			.right dl>dd p input{width: 45%;}
+			.right dl>dd dt p span{width: 28%;}
+			.right dl>dd dd p span{width: 28%;}
+			.right dl b{display:inline-block;text-indent: 3px;color: #e70019;}
+			.right h3{width: 100%;}
+			.right table{width:96%;margin-left:2% ;border: 1px solid #e4e5e7;border-spacing:10px 8px;font-size: 13px;margin-top: 18px;}
+		</style>
+	</head>
+	<body>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js"></script>
+		<script src="../js/common/nwmatcher.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lte IE 8]><script src="../js/common/selectivizr.js"></script><![endif]-->
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+		<p id='address'>当前位置:<span>交叉血采集</span></p>
+		<div id="box">
+			<div class="left">
+				<h3>20病区 申请列表</h3>
+				<div>
+					<dl>
+						<dt>
+							<p><span>申请日期：</span><input type="text" id="dateStart"/>--<input type="text" data-beatpicker="true" id="dateEnd"/></p>
+							<p><span>患者姓名：</span><input type="text"/></p>
+						</dt>
+						<dd>
+							<p><span>采集状态：</span><input type="radio" checked="checked"/><b>未采集</b><input type="radio"/><b>已采集</b></p>
+							<button>查询</button>
+						</dd>
+					</dl>
+					
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th width="6%">NO</th>
+							<th width="10%">姓名</th>
+							<th width="5%">年龄</th>
+							<th width="5%">性别</th>
+							<th width="10%">床位号</th>
+							<th width="10%">住院号</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>13</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+						<tr>
+							<td>17</td>
+							<td>张珊珊</td>
+							<td>31</td>
+							<td>男</td>
+							<td>1111</td>
+							<td>1112</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="right">
+				<h3>交叉采集录入</h3>
+				<dl>
+					<dt>
+						<p><span>见证者：</span><input type="text" value="xxx外科"/><b>※护士长或责任护士</b></p>
+						<p><span>采血者：</span><input type="text" value="李医生"/><b>※</b></p>
+						<p><span>腕带：</span><input type="text" value="123456789"/><b>※</b></p>
+						<p><span>试管条码：</span><input type="text" value="2017/11/13"/><b>※</b></p>
+					</dt>
+					<dd>
+						<dl>
+							<dt>
+								<p><span>患者姓名：</span><input type="text" disabled="disabled" value="xxx外科"/></p>
+								<p><span>住院号：</span><input type="text" disabled="disabled" value="李医生"/></p>
+								<p><span>床位号：</span><input type="text" disabled="disabled" value="123456789"/></p>
+								<p><span>年龄：</span><input type="text" disabled="disabled" value="2017/11/13"/></p>
+								<p><span>性别：</span><input type="text" disabled="disabled" value="2017/11/13"/></p>
+							</dt>
+							<dd>
+								<p><span>ABO血型：</span><input type="text" disabled="disabled" value="xxx外科"/></p>
+								<p><span>RH(D)血型：</span><input type="text" disabled="disabled" value="李医生"/></p>
+								<p><span>输血同意书：</span><input type="text" disabled="disabled" value="123456789"/></p>
+								<p><span>诊断：</span><input type="text" disabled="disabled" value="2017/11/13"/></p>
+							</dd>
+						</dl>
+					</dd>
+				</dl>
+				<div style="height:1px; margin-top:-1px;clear:both;overflow:hidden;"></div>
+				<div style="width: 100%;height:10px;background: #f5f5f5;clear: both;border-top:2px solid #dfdfdf;"></div>
+				<h3>采血信息一览</h3>
+				<table>
+					<thead>
+						<tr>
+							<th width="8%">NO</th>
+							<th width="20%">采集时间</th>
+							<th width="15%">条码号</th>
+							<th width="8%">试管确认</th>
+							<th width="8%">腕带确认</th>
+							<th width="10%">患者姓名</th>
+							<th width="12%">采血者</th>
+							<th width="12%">见证者</th>
+							<th width="20%">备注</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>ok</td>
+							<td>ok</td>
+							<td>张三</td>
+							<td>国际护士</td>
+							<td>责任护士</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>ok</td>
+							<td>ok</td>
+							<td>张三</td>
+							<td>国际护士</td>
+							<td>责任护士</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>ok</td>
+							<td>ok</td>
+							<td>张三</td>
+							<td>国际护士</td>
+							<td>责任护士</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>ok</td>
+							<td>ok</td>
+							<td>张三</td>
+							<td>国际护士</td>
+							<td>责任护士</td>
+							<td>重采:A000000004</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>2016/9/26 09:24</td>
+							<td>A000000004</td>
+							<td>ok</td>
+							<td>ok</td>
+							<td>张三</td>
+							<td>国际护士</td>
+							<td>责任护士</td>
+							<td>重采:A000000004</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
