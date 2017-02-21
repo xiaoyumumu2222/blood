@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			html,body{width: 100%;}
+			.header{width: 100%;}
+			.footer{width: 100%;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:10%;width: 60%;min-width:200px;margin:0 20%;z-index: 11;background: #F5F5F5;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top .t1 div{display: inline-block;width:94%;margin:10px 3% 0;}
+			#shade .top .t1 .p1{width: 38%;float: left;}
+			#shade .top .t1 .p1 span{color: #e5001b;font-weight: bold;}
+			#shade .top .t1 .p2{width: 32%;float: left;}
+			#shade .top .t1 .p2 input{margin-left: 20px;}
+			#shade .top .t1 .p3{width: 15%;float: left;}
+			#shade .top .t1 .p4{width: 15%;float: left;text-align: right;}
+			#shade .top .t1 table{margin-bottom: 20px;}
+			#shade .top .t2 table{margin-bottom: 20px;}
+			#shade .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade .top .t1{box-shadow: 2px 2px 4px #CCCCCC;background: white;width: 96%;margin: 10px 2%;}
+			#shade .top .t2{margin: 10px 2% 20px;box-shadow: 2px 2px 4px #CCCCCC;background: white;width: 96%;}
+			#shade .top .t2 div{display: inline-block;width:94%;margin:10px 3% 0;}
+			#shade .top .t2 p{width: 100%;}
+			#shade .top .t2 p button{float: right;}
+			#shade .top div p input[type="text"]{width:50%;height: 20px;}
+			#shade1 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade1 .top{position:fixed;left:0;top:10%;width: 60%;min-width:200px;margin:0 20%;z-index: 11;background: #F5F5F5;}
+			#shade1 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade1 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade1 .top .t1 div{display: inline-block;width:94%;margin:10px 3% 0;}
+			#shade1 .top .t1 .p1{width: 38%;float: left;}
+			#shade1 .top .t1 .p1 span{color: #e5001b;font-weight: bold;}
+			#shade1 .top .t1 .p2{width: 32%;float: left;}
+			#shade1 .top .t1 .p2 input{margin-left: 20px;}
+			#shade1 .top .t1 .p3{width: 15%;float: left;}
+			#shade1 .top .t1 .p4{width: 15%;float: left;text-align: right;}
+			#shade1 .top .t1 table{margin-bottom: 20px;}
+			#shade1 .top .t2 table{margin-bottom: 20px;}
+			#shade1 .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .top .t1{box-shadow: 2px 2px 4px #CCCCCC;background: white;width: 96%;margin: 10px 2%;}
+			#shade1 .top .t2{margin: 10px 2% 20px;box-shadow: 2px 2px 4px #CCCCCC;background: white;width: 96%;}
+			#shade1 .top .t2 div{display: inline-block;width:94%;margin:10px 3% 0;}
+			#shade1 .top .t2 p{width: 100%;}
+			#shade1 .top .t2 p button{float: right;}
+			#shade1 .top div p input[type="text"]{width:50%;height: 20px;}
+		</style>
+		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/transfusion.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bout.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script src="../js/common/header.js" type="text/javascript" charset="utf-8"></script>
+		<div id="box">
+			<div id="shade" style="display: block;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—血液融化<span>╳</span></h3>
+					<div class="t1">
+						<h3>结束融化</h3>
+						<div>
+							<p class="p1"><input type="text"/><span> 请扫描血袋号</span></p>
+							<p class="p2"><input type="radio"/><span>融化开始</span><input type="radio"/><span>融化结束</span></p>
+							<p class="p3">现在时间：<span>16:10:10</span></p>
+							<p class="p4"><button>退出</button></p>
+						</div>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="4%">NO</th>
+									<th width="10%">血液类型</th>
+									<th width="8%">血袋号</th>
+									<th width="8%">献血号</th>
+									<th width="5%">性别</th>
+									<th width="6%">ABO血型</th>
+									<th width="5%">RH血型</th>
+									<th width="5%">RH表型</th>
+									<th width="4%">数量</th>
+									<th width="4%">单位</th>
+									<th width="12%">开始时间</th>
+									<th width="4%">历时</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>融化中冰冻制品</h3>
+						<div>
+							<p><button>选择</button></p>
+						</div>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="4%">选择</th>
+									<th width="10%">血液类型</th>
+									<th width="8%">血袋号</th>
+									<th width="8%">献血号</th>
+									<th width="5%">性别</th>
+									<th width="6%">ABO血型</th>
+									<th width="5%">RH血型</th>
+									<th width="5%">RH表型</th>
+									<th width="4%">数量</th>
+									<th width="4%">单位</th>
+									<th width="12%">开始时间</th>
+									<th width="4%">历时</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>新鲜冰冻血浆</td>
+									<td>16805748</td>
+									<td>17591500</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>200</td>
+									<td>U</td>
+									<td>2016/10/11 16:18</td>
+									<td>20分</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

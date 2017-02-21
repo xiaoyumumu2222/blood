@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
 		<style type="text/css">
 			html,body{width: 100%;}
 			.header{width: 100%;}
 			.footer{width: 100%;}
 			#address button{margin-top: 4px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
 			#address span{float: right;margin-right: 40px;}
-			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
 			#box div{background: white;display: inline-block;width: 100%;}
 			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width: 98%;margin: 0 1%;}
 			#box .b1 table{width: 97%;margin: 20px auto;}
@@ -23,6 +23,116 @@
 			#box .b2 td{border: 1px solid #e5e5e7;}
 			#box .b2 p{margin-top: 184px;font-weight: bold;}
 			#box .b2 p span{font-weight: normal;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:30%;width: 22%;min-width:200px;margin:0 39%;z-index: 11;background: #fff;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top div{margin-top: 10px;}
+			#shade .top div p{line-height: 28px;}
+			#shade .top div p:last-child{width: 78%;float: right;margin:14px 22% 20px 0;}
+			#shade .top div p:last-child button{float: right;margin-left: 20px;}
+			#shade .top div p span{display: inline-block;width: 34%;text-align: right;}
+			#shade .top div p select{width:36%;height: 22px;}
+			#shade .top div p input{width:43%;height: 20px;}
+			#shade1 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade1 .top{position:fixed;left:0;top:3%;width: 86%;min-width:200px;margin:0 7%;z-index: 11;background: #F5F5F5;}
+			#shade1 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade1 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade1 .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t3 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t4 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t5 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t6 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t1{width: 70%;float: left;margin-left: 1%;margin-top:10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade1 .t2{width: 27%;float: left;margin:10px 0;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade1 .t3{width: 70%;float: left;margin-left: 1%;margin-top:10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade1 .t4{width: 27%;float: left;margin:10px 0 0;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade1 .t5{width: 48%;float: left;margin-left: 1%;margin-top:10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade1 .t6{width: 49%;float: left;margin:10px 0 20px;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade1 .t1 div{margin: 10px 0 15px;}
+			#shade1 .t1 p{margin-top: 6px;}
+			#shade1 .t1 p span{display: inline-block;width: 28%;text-align: right;}
+			#shade1 .t1 p input{width: 55%;}
+			#shade1 .t1 .tt1{width: 40%;float: left;}
+			#shade1 .t1 .tt2{width: 27%;float: left;}
+			#shade1 .t1 .tt3{width: 32%;float:left}
+			#shade1 .t1 .tt1 p span{display: inline-block;width: 24%;text-align: right;}
+			#shade1 .t1 .tt1 p input{width: 36%;}
+			#shade1 .t1 .tt3 table{margin-top: 6px;border: 1px solid #dbe2e8;}
+			#shade1 .t1 .tt3 table tr td{border: 1px solid #fff;background: #e4e6e5;}
+			#shade1 .t1 .tt3 table tr td:first-child{background: #e6f3fc;font-weight: bold;}
+			#shade1 .t1 .tt3 p button{margin:0 10px;float: right;}
+			#shade1 .t1 .tt3 p:last-child{text-align: center;margin-top: 26px;}
+			#shade1 .t2 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 94%;margin: 10px 3%;}
+			#shade1 .t2 table tr th{border: 1px solid #fff;background: #e6f3fc;}
+			#shade1 .t2 table tr td{border: 1px solid #fff;background: #e4e6e5;}
+			#shade1 .t3 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 96%;margin: 10px 2%;}
+			#shade1 .t4 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 92%;margin: 10px 4%;}
+			#shade1 .t4 table select{height: 22px;}
+			#shade1 .t5 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 94%;margin: 10px 3%;}
+			#shade1 .t6 p{margin-left: 3%;margin-top: 10px;width: 94%;}
+			#shade1 .t6 p button{float: right;}
+			#shade1 .t6 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 94%;margin: 10px 3%;}
+			#shade1 .t6 table select{height: 22px;}
+			#shade1 b{color: #d90017;}
+			#shade2 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade2 .top{position:fixed;left:0;top:3%;width: 86%;min-width:200px;margin:0 7%;z-index: 11;background: #F5F5F5;}
+			#shade2 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade2 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade2 .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t3 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t4 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t5 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t6 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade2 .t1{width: 70%;float: left;margin-left: 1%;margin-top:10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade2 .t2{width: 27%;float: left;margin:10px 0;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade2 .t3{width: 70%;float: left;margin-left: 1%;margin-top:10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade2 .t4{width: 27%;float: left;margin:10px 0 0;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade2 .t5{width: 48%;float: left;margin-left: 1%;margin-top:10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade2 .t6{width: 49%;float: left;margin:10px 0 20px;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade2 .t1 div{margin: 10px 0 15px;}
+			#shade2 .t1 p{margin-top: 6px;}
+			#shade2 .t1 p span{display: inline-block;width: 28%;text-align: right;}
+			#shade2 .t1 p input{width: 55%;}
+			#shade2 .t1 .tt1{width: 40%;float: left;}
+			#shade2 .t1 .tt2{width: 27%;float: left;}
+			#shade2 .t1 .tt3{width: 32%;float:left}
+			#shade2 .t1 .tt1 p span{display: inline-block;width: 24%;text-align: right;}
+			#shade2 .t1 .tt1 p input{width: 36%;}
+			#shade2 .t1 .tt3 table{margin-top: 6px;border: 1px solid #dbe2e8;}
+			#shade2 .t1 .tt3 table tr td{border: 1px solid #fff;background: #e4e6e5;}
+			#shade2 .t1 .tt3 table tr td:first-child{background: #e6f3fc;font-weight: bold;}
+			#shade2 .t1 .tt3 p button{margin:0 10px;float: right;}
+			#shade2 .t1 .tt3 p:last-child{text-align: center;margin-top: 26px;}
+			#shade2 .t2 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 94%;margin: 10px 3%;}
+			#shade2 .t2 table tr th{border: 1px solid #fff;background: #e6f3fc;}
+			#shade2 .t2 table tr td{border: 1px solid #fff;background: #e4e6e5;}
+			#shade2 .t3 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 96%;margin: 10px 2%;}
+			#shade2 .t4 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 92%;margin: 10px 4%;}
+			#shade2 .t4 table select{height: 22px;}
+			#shade2 .t5 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 94%;margin: 10px 3% 20px;}
+			#shade2 .t6 p{margin-left: 3%;margin-top: 10px;width: 94%;}
+			#shade2 .t6 p button{float: right;}
+			#shade2 .t6 table{margin-top: 6px;border: 1px solid #dbe2e8;width: 94%;margin: 10px 3% 20px;}
+			#shade2 .t6 table select{height: 22px;}
+			#shade2 b{color: #d90017;}
+			#shade3 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade3 .top{position:fixed;left:0;top:30%;width: 24%;min-width:200px;margin:0 38%;z-index: 11;background: #fff;}
+			#shade3 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade3 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade3 .top div p{font-weight:bold;width: 100%;text-align: center;color: #d90017;margin:30px 0 ;}
+			#shade3 .top div p button:last-child{margin-left: 30px;}
+			#shade4 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade4 .top{position:fixed;left:0;top:30%;width: 24%;min-width:200px;margin:0 38%;z-index: 11;background: #fff;}
+			#shade4 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade4 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade4 .top div p{font-weight:bold;width: 100%;text-align: center;color: #d90017;margin:30px 0 ;}
+			#shade4 .top div p:nth-child(2){margin: 20px 0;}
+			#shade4 .top div p button:last-child{margin-left: 30px;}
+			#shade4 .top table{width: 60%;margin: 20px 30% 0px 20%;}
+			#shade4 .top table td{border: 1px solid #e4e5e7;background: white;}
 		</style>
 		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
@@ -205,6 +315,573 @@
 					</tr>
 				</table>
 			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—交叉配血查询条件设定<span>╳</span></h3>
+					<div>
+						<p><span>预出日F：</span><input type="text"/></p>
+						<p><span>预出日T：</span><input type="text"/></p>
+						<p><span>血液类型：</span><select name=""><option value=""></option></select></p>
+						<p><span>ABO血型：</span><select name=""><option value=""></option></select></p>
+						<p><span>RH血型：</span><select name=""><option value=""></option></select></p>
+						<p><button>退出</button><button>查询</button></p>
+					</div>
+				</div>
+			</div>
+			<div id="shade1" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—预出库信息录入<span>╳</span></h3>
+					<div class="t1">
+						<h3>预出库信息</h3>
+						<div class="tt1">
+							<p><span>申请条码：</span><input type="text"/> <b>在此扫描申请单条码</b></p>
+							<p><span>病历号：</span><input type="text" disabled="disabled"/></p>
+							<p><span>患者姓名：</span><input type="text" disabled="disabled"/></p>
+							<p><span>性别：</span><input type="text" disabled="disabled"/></p>
+							<p><span>年龄：</span><input type="text" disabled="disabled"/></p>
+						</div>
+						<div class="tt2">
+							<p><span>ABO血型：</span><input type="text" disabled="disabled"/></p>
+							<p><span>RH血型：</span><input type="text" disabled="disabled"/></p>
+							<p><span>RH表型：</span><input type="text" disabled="disabled"/></p>
+						</div>
+						<div class="tt3">
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<td>申请种类：</td>
+									<td>悬浮红细胞</td>
+									<td>血浆</td>
+									<td>血小板</td>
+									<td>药品-1</td>
+								</tr>
+								<tr>
+									<td>申请数量：</td>
+									<td>4.0</td>
+									<td>4.0</td>
+									<td>4.0</td>
+									<td>4.0</td>
+								</tr>
+								<tr>
+									<td>申请单位：</td>
+									<td>U</td>
+									<td>ML</td>
+									<td>U</td>
+									<td>瓶</td>
+								</tr>
+							</table>
+							<p><button>退出</button><button>保存</button><button>检验结果</button></p>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>患者累计用血信息</h3>
+						<table border="" cellspacing="" cellpadding="">
+							<tr>
+								<th width="30%">类型</th>
+								<th>红细胞</th>
+								<th>血浆</th>
+								<th>血小板</th>
+								<th>累计</th>								
+							</tr>
+							<tr>
+								<td>24小时用血</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>累计用血</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div class="t3">
+						<h3>交叉类血液(红细胞，浓缩血小板)</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="10%">血液类型</th>
+									<th width="10%">产品号</th>
+									<th width="8%">ABO血型</th>
+									<th width="10%">RH血型</th>
+									<th width="6%">RH表型</th>
+									<th width="6%">数量</th>
+									<th width="6%">单位</th>
+									<th width="6%">辐照</th>
+									<th width="6%">洗涤</th>
+									<th width="8%">滤白</th>
+									<th width="8%">灭活</th>
+									<th width="10%">到期日期</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>红细胞悬液</td>
+									<td>17591500</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>是</td>
+									<td>否</td>
+									<td>否</td>
+									<td>否</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>红细胞悬液</td>
+									<td>17591500</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>是</td>
+									<td>否</td>
+									<td>否</td>
+									<td>否</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>红细胞悬液</td>
+									<td>17591500</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>是</td>
+									<td>否</td>
+									<td>否</td>
+									<td>否</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t4">
+						<h3>非交叉类血液(药品)</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="10%">药品种类</th>
+									<th width="6%">数量</th>
+									<th width="6%">单位</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td><select name=""><option value="">药品-1</option></select></td>
+									<td>2</td>
+									<td>瓶</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td><select name=""><option value="">药品-1</option></select></td>
+									<td>2</td>
+									<td>瓶</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td><select name=""><option value="">药品-1</option></select></td>
+									<td>2</td>
+									<td>瓶</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t5">
+						<h3>自体血</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="10%">血液类型</th>
+									<th width="6%">产品号</th>
+									<th width="6%">数量</th>
+									<th width="6%">单位</th>
+									<th width="6%">到期日期</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>自体-全血</td>
+									<td>17591500</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>自体-全血</td>
+									<td>17591500</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>自体-全血</td>
+									<td>17591500</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t6">
+						<h3>非交叉类血液</h3>
+						<p><input type="text"/> <b>请逐个扫描血袋号</b><button>删除</button></p>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="8%">血液类型</th>
+									<th width="6%">产品号</th>
+									<th width="6%">ABO血型</th>
+									<th width="6%">RH血型</th>
+									<th width="5%">数量</th>
+									<th width="5%">单位</th>
+									<th width="10%">到期日期</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>普通血浆</td>
+									<td>Z2212121</td>
+									<td><select><option>A型</option></select></td>
+									<td><select><option>阳性(+)</option></select></td>
+									<td>400</td>
+									<td>ML</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>普通血浆</td>
+									<td>Z2212121</td>
+									<td><select><option>A型</option></select></td>
+									<td><select><option>阳性(+)</option></select></td>
+									<td>400</td>
+									<td>ML</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>普通血浆</td>
+									<td>Z2212121</td>
+									<td><select><option>A型</option></select></td>
+									<td><select><option>阳性(+)</option></select></td>
+									<td>400</td>
+									<td>ML</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="shade2" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—预出库信息录入<span>╳</span></h3>
+					<div class="t1">
+						<h3>预出库信息</h3>
+						<div class="tt1">
+							<p><span>申请条码：</span><input type="text"/> <b>在此扫描申请单条码</b></p>
+							<p><span>病历号：</span><input type="text" disabled="disabled"/></p>
+							<p><span>患者姓名：</span><input type="text" disabled="disabled"/></p>
+							<p><span>性别：</span><input type="text" disabled="disabled"/></p>
+							<p><span>年龄：</span><input type="text" disabled="disabled"/></p>
+						</div>
+						<div class="tt2">
+							<p><span>ABO血型：</span><input type="text" disabled="disabled"/></p>
+							<p><span>RH血型：</span><input type="text" disabled="disabled"/></p>
+							<p><span>RH表型：</span><input type="text" disabled="disabled"/></p>
+						</div>
+						<div class="tt3">
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<td>申请种类：</td>
+									<td>悬浮红细胞</td>
+									<td>血浆</td>
+									<td>血小板</td>
+									<td>药品-1</td>
+								</tr>
+								<tr>
+									<td>申请数量：</td>
+									<td>4.0</td>
+									<td>4.0</td>
+									<td>4.0</td>
+									<td>4.0</td>
+								</tr>
+								<tr>
+									<td>申请单位：</td>
+									<td>U</td>
+									<td>ML</td>
+									<td>U</td>
+									<td>瓶</td>
+								</tr>
+							</table>
+							<p><button>退出</button><button>保存</button><button>检验结果</button></p>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>患者累计用血信息</h3>
+						<table border="" cellspacing="" cellpadding="">
+							<tr>
+								<th width="30%">类型</th>
+								<th>红细胞</th>
+								<th>血浆</th>
+								<th>血小板</th>
+								<th>累计</th>								
+							</tr>
+							<tr>
+								<td>24小时用血</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>累计用血</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div class="t3">
+						<h3>交叉类血液(红细胞，浓缩血小板)</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="10%">血液类型</th>
+									<th width="10%">产品号</th>
+									<th width="8%">ABO血型</th>
+									<th width="10%">RH血型</th>
+									<th width="6%">RH表型</th>
+									<th width="6%">数量</th>
+									<th width="6%">单位</th>
+									<th width="6%">辐照</th>
+									<th width="6%">洗涤</th>
+									<th width="8%">滤白</th>
+									<th width="8%">灭活</th>
+									<th width="10%">到期日期</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>红细胞悬液</td>
+									<td>17591500</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>是</td>
+									<td>否</td>
+									<td>否</td>
+									<td>否</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>红细胞悬液</td>
+									<td>17591500</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>是</td>
+									<td>否</td>
+									<td>否</td>
+									<td>否</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>红细胞悬液</td>
+									<td>17591500</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>CcEe</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>是</td>
+									<td>否</td>
+									<td>否</td>
+									<td>否</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t4">
+						<h3>非交叉类血液(药品)</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="10%">药品种类</th>
+									<th width="6%">数量</th>
+									<th width="6%">单位</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td><select name=""><option value="">药品-1</option></select></td>
+									<td>2</td>
+									<td>瓶</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td><select name=""><option value="">药品-1</option></select></td>
+									<td>2</td>
+									<td>瓶</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td><select name=""><option value="">药品-1</option></select></td>
+									<td>2</td>
+									<td>瓶</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t5">
+						<h3>自体血</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="10%">血液类型</th>
+									<th width="6%">产品号</th>
+									<th width="6%">数量</th>
+									<th width="6%">单位</th>
+									<th width="6%">到期日期</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>自体-全血</td>
+									<td>17591500</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>自体-全血</td>
+									<td>17591500</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>自体-全血</td>
+									<td>17591500</td>
+									<td>2.0</td>
+									<td>U</td>
+									<td>yyyy/mm/dd</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t6">
+						<h3>非交叉类血液</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="5%">选择</th>
+									<th width="8%">血液类型</th>
+									<th width="6%">产品号</th>
+									<th width="6%">ABO血型</th>
+									<th width="6%">RH血型</th>
+									<th width="5%">数量</th>
+									<th width="5%">单位</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>普通血浆</td>
+									<td>Z2212121</td>
+									<td><select><option>A型</option></select></td>
+									<td><select><option>阳性(+)</option></select></td>
+									<td>400</td>
+									<td>ML</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>普通血浆</td>
+									<td>Z2212121</td>
+									<td><select><option>A型</option></select></td>
+									<td><select><option>阳性(+)</option></select></td>
+									<td>400</td>
+									<td>ML</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"/></td>
+									<td>普通血浆</td>
+									<td>Z2212121</td>
+									<td><select><option>A型</option></select></td>
+									<td><select><option>阳性(+)</option></select></td>
+									<td>400</td>
+									<td>ML</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="shade3" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—同意书未确认提醒<span>╳</span></h3>
+					<div>
+						<p>该患者本次住院同意书未确认，请联系临床！</p>
+						<p><button>继续</button><button>返回</button></p>
+					</div>
+				</div>
+			</div>	
+			<div id="shade4" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—自体血未发提醒<span>╳</span></h3>
+					<div>
+						<p>该患者还有下列自体血未发</p>
+						<p>
+							<table>
+								<tr>
+									<td>自体—全血</td>
+									<td>Z0202034320</td>
+								</tr>
+								<tr>
+									<td>浓缩血</td>
+									<td>Z0202034322</td>
+								</tr>
+							</table>
+						</p>
+						<p><button>确定</button></p>
+					</div>
+				</div>
+			</div>	
 		</div>
 		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
 	</body>
