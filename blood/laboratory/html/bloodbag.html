@@ -11,7 +11,9 @@
 			.footer{width: 100%;}
 			#address button{margin-top: 7px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
 			#address span{float: right;margin-right: 40px;}
-			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b3 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
 			#box div{background: white;display: inline-block;width: 100%;}
 			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width:78%;margin: 0 1%;float: left;}
 			#box .b2{box-shadow: 2px 2px 4px #CCCCCC;width:19%;float: left;display: inline-block}
@@ -31,6 +33,23 @@
 			#box .b2 table{width: 60%;margin: 10px 0 20px 10%;}	
 			#box .b2 tr:nth-of-type(even){background: white;}
 			#box .b2 td{border: 1px solid #e5e5e7;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:10%;width: 66%;min-width:200px;margin:0 17%;z-index: 11;background: #F5F5F5;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade .t1{width: 45%;float: left;margin: 10px 0 15px;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade .t2{width: 52%;margin-left: 1%;float: left;margin-top: 10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade .top dl dt,#shade .top dl dd{float: left;width: 50%;}
+			#shade .top dl dt div{margin-top: 20px;}
+			#shade .top dl dd div{margin-top: 20px;}
+			#shade .top dl dd div:last-child{margin-top: 46px;}
+			#shade .top div p{line-height: 22px;}
+			#shade .top div p span{display: inline-block;width: 40%;text-align: right;}
+			#shade .top div p input{width:50%;height: 20px;}
+			#shade .t2 table{margin: 10px 3%;width: 94%;}
+			#shade .t2 button{float: right;margin: 20px 3% 15px 0;}
 		</style>
 		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
@@ -225,6 +244,131 @@
 						<td>2016/9/27 09:11</td>
 					</tr>
 				</table>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—血袋查询条件设定<span>╳</span></h3>
+					<div class="t1">
+						<h3>标本详细信息</h3>
+						<dl>
+							<dt>
+								<div>
+									<p><span>产品号：</span><input type="text"/></p>
+									<p><span>血液来源：</span><input type="text" disabled="disabled"/></p>
+									<p><span>血液类型：</span><input type="text" disabled="disabled"/></p>
+									<p><span>献血码：</span><input type="text" disabled="disabled"/></p>
+									<p><span>ABO血型：</span><input type="text" disabled="disabled"/></p>
+									<p><span>RH血型：</span><input type="text" disabled="disabled"/></p>
+									<p><span>RH表型：</span><input type="text" disabled="disabled"/></p>
+									<p><span>数量：</span><input type="text" disabled="disabled"/></p>
+									<p><span>单位：</span><input type="text" disabled="disabled"/></p>
+									<p><span>费用：</span><input type="text" disabled="disabled"/></p>
+									<p><span>制备日期：</span><input type="text" disabled="disabled"/></p>
+									<p><span>到期日期：</span><input type="text" disabled="disabled"/></p>
+								</div>
+							</dt>
+							<dd>
+								<div>
+									<p><span>入库员：</span><input type="text" disabled="disabled"/></p>
+									<p><span>入库日期：</span><input type="text" disabled="disabled"/></p>
+									<p><span>出库员：</span><input type="text" disabled="disabled"/></p>
+									<p><span>出库日期：</span><input type="text" disabled="disabled"/></p>
+									<p><span>回收员：</span><input type="text" disabled="disabled"/></p>
+									<p><span>回收日期：</span><input type="text" disabled="disabled"/></p>
+									<p><span>销毁员：</span><input type="text" disabled="disabled"/></p>
+									<p><span>销毁日期：</span><input type="text" disabled="disabled"/></p>
+								</div>
+								<div>
+									
+									<p><span>退回次数：</span><input type="text" disabled="disabled"/></p>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="t2">
+						<h3>相关操作历史记录</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="25%">操作日期</th>
+									<th width="15%">操作内容</th>
+									<th width="15%">操作人员</th>
+									<th width="15%">病历号</th>
+									<th width="8%">病区</th>
+									<th width="10%">床位号</th>
+									<th width="8%">姓名</th>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>标本采集</td>
+									<td>采集员</td>
+									<td>11212123</td>
+									<td>急诊</td>
+									<td>112</td>
+									<td>xxx</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>标本采集</td>
+									<td>采集员</td>
+									<td>11212123</td>
+									<td>急诊</td>
+									<td>112</td>
+									<td>xxx</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>标本采集</td>
+									<td>采集员</td>
+									<td>11212123</td>
+									<td>急诊</td>
+									<td>112</td>
+									<td>xxx</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>标本采集</td>
+									<td>采集员</td>
+									<td>11212123</td>
+									<td>急诊</td>
+									<td>112</td>
+									<td>xxx</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>标本采集</td>
+									<td>采集员</td>
+									<td>11212123</td>
+									<td>急诊</td>
+									<td>112</td>
+									<td>xxx</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>标本采集</td>
+									<td>采集员</td>
+									<td>11212123</td>
+									<td>急诊</td>
+									<td>112</td>
+									<td>xxx</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>标本采集</td>
+									<td>采集员</td>
+									<td>11212123</td>
+									<td>急诊</td>
+									<td>112</td>
+									<td>xxx</td>
+								</tr>
+							</table>
+						</div>
+						<button>退出</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>

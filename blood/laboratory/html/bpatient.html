@@ -11,7 +11,9 @@
 			.footer{width: 100%;}
 			#address button{margin-top: 4px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
 			#address span{float: right;margin-right: 40px;}
-			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b3 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
 			#box div{background: white;display: inline-block;width: 100%;}
 			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width:98%;margin: 0 1%;}
 			#box .b1 div{float: left;width: 25%;}
@@ -30,6 +32,24 @@
 			#box .b3 td{border: 1px solid #e5e5e7;}
 			#box .b3 p{margin-top: 184px;font-weight: bold;}
 			#box .b3 p span{font-weight: normal;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:20%;width: 66%;min-width:200px;margin:0 17%;z-index: 11;background: #F5F5F5;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade .t1{width: 29%;float: left;margin: 10px 0 15px;margin-left: 1%;padding-bottom: 25px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade .t2{width: 68%;margin-left: 1%;float: left;margin-top: 10px;box-shadow: 2px 2px 4px #CCCCCC;}
+			#shade .t1 div p{line-height: 30px;}
+			#shade .t1 div p span{display: inline-block;width: 36%;text-align: right;}
+			#shade .t1 div p input{width:48%;height: 20px;}
+			#shade .t1 div p textarea{width: 47%;height: 50px;vertical-align: top;}
+			#shade .t2 div{margin-top: 10px;}
+			#shade .t2 p{margin: 20px 0 0 3%;width: 94%;}
+			#shade .t2 p select{width:20%;height: 22px;}
+			#shade .t2 p span{text-align: left;color: #3b9fea;}
+			#shade .t2 table{margin: 0px 3% 10px;width: 94%;}
+			#shade .t2 button{float: right;margin: 0;}
 		</style>
 		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
@@ -180,6 +200,123 @@
 						<td>30</td>
 					</tr>
 				</table>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—血袋查询条件设定<span>╳</span></h3>
+					<div class="t1">
+						<h3>患者基本信息</h3>
+						<div>
+							<p><span>病历号：</span><input type="text" disabled="disabled"/></p>
+							<p><span>患者姓名：</span><input type="text" disabled="disabled"/></p>
+							<p><span>性别：</span><input type="text" disabled="disabled"/></p>
+							<p><span>年龄：</span><input type="text" disabled="disabled"/></p>
+							<p><span>ABO血型：</span><input type="text" disabled="disabled"/></p>
+							<p><span>RH血型：</span><input type="text" disabled="disabled"/></p>
+							<p><span>联系电话：</span><input type="text" disabled="disabled"/></p>
+							<p><span>联系地址：</span><textarea disabled="disabled"/></textarea></p>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>相关历史记录</h3>
+						<p>
+							<select>
+								<option value="">临床申请</option>
+								<option value="">血型检测</option>
+								<option value="">不规则抗体筛查</option>
+								<option value="">血小板抗体筛查</option>
+								<option value="">Coombs检测</option>
+								<option value="">交叉配血</option>
+								<option value="">自体储血</option>
+								<option value="">单采治疗</option>
+								<option value="">其他检验</option>
+								<option value="">出库记录</option>
+								<option value="">系统计费记录</option>
+							</select>
+							<span>请选择</span>
+							<button>退出</button>
+						</p>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="20%">申请日期</th>
+									<th width="12%">申请单号</th>
+									<th width="8%">病区</th>
+									<th width="8%">床位号</th>
+									<th width="24%">申请类型及用量</th>
+									<th width="10%">申请科别</th>
+									<th width="10%">申请医生</th>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>Y000000001</td>
+									<td>20</td>
+									<td>1112</td>
+									<td>悬浮红细胞2u;血浆400ml</td>
+									<td>神经外科</td>
+									<td>神医1</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>Y000000001</td>
+									<td>20</td>
+									<td>1112</td>
+									<td>悬浮红细胞2u;血浆400ml</td>
+									<td>神经外科</td>
+									<td>神医1</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>Y000000001</td>
+									<td>20</td>
+									<td>1112</td>
+									<td>悬浮红细胞2u;血浆400ml</td>
+									<td>神经外科</td>
+									<td>神医1</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>Y000000001</td>
+									<td>20</td>
+									<td>1112</td>
+									<td>悬浮红细胞2u;血浆400ml</td>
+									<td>神经外科</td>
+									<td>神医1</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>Y000000001</td>
+									<td>20</td>
+									<td>1112</td>
+									<td>悬浮红细胞2u;血浆400ml</td>
+									<td>神经外科</td>
+									<td>神医1</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>Y000000001</td>
+									<td>20</td>
+									<td>1112</td>
+									<td>悬浮红细胞2u;血浆400ml</td>
+									<td>神经外科</td>
+									<td>神医1</td>
+								</tr>
+								<tr>
+									<td>2016/09/29 09:31</td>
+									<td>Y000000001</td>
+									<td>20</td>
+									<td>1112</td>
+									<td>悬浮红细胞2u;血浆400ml</td>
+									<td>神经外科</td>
+									<td>神医1</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>

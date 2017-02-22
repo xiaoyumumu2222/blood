@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
 		<style type="text/css">
 			html,body{width: 100%;}
 			.header{width: 100%;}
 			.footer{width: 100%;}
 			#address button{margin-top: 4px;margin-left: 10px;color: #666666;background: #f4f8f9;border: 1px solid #e5e9ea;}
 			#address span{float: right;margin-right: 40px;}
-			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
 			#box div{background: white;display: inline-block;width: 100%;}
 			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width:98%;margin: 0 1%;}
 			#box .b1 table{width: 97%;margin: 10px 20px auto ;}
@@ -31,6 +31,17 @@
 			#box .b2 td{border: 1px solid #e5e5e7;}
 			#box .b2 p{margin-top: 184px;font-weight: bold;}
 			#box .b2 p span{font-weight: normal;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:30%;width: 22%;min-width:200px;margin:0 39%;z-index: 11;background: #fff;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top div{margin-top: 10px;}
+			#shade .top div p{line-height: 28px;}
+			#shade .top div p:last-child{width: 78%;float: right;margin:14px 22% 20px 0;}
+			#shade .top div p:last-child button{float: right;margin-left: 20px;}
+			#shade .top div p span{display: inline-block;width: 34%;text-align: right;}
+			#shade .top div p select{width:36%;height: 22px;}
+			#shade .top div p input{width:43%;height: 20px;}
 		</style>
 		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
@@ -143,7 +154,21 @@
 					</tr>
 				</table>
 			</div>
-			
+			<div id="shade" style="display: block;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—药品查询条件设定<span>╳</span></h3>
+					<div>
+						<p><span>录入日F：</span><input type="text"/></p>
+						<p><span>录入日T：</span><input type="text"/></p>
+						<p><span>药品名称：</span><select name=""><option value=""></option></select></p>
+						<p><span>制造商：</span><select name=""><option value=""></option></select></p>
+						<p><button>退出</button><button>查询</button></p>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
 	</body>
