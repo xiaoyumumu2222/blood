@@ -1,4 +1,16 @@
 $(function(){
+	$(".btn button").on("click",function(){
+		$(this).siblings().css({
+			background:"#f4f8f9",
+			color:"#666",
+			border:"1px solid #e9ebea"
+		})
+		$(this).css({
+			background:"#45a7f2",
+			color:"#fff",
+			border:"1px solid #45a7f2"
+		})
+	})
 	var minheight=$(window).height()-132;
 	console.log(minheight);
 	$(".left").height(minheight);
@@ -25,5 +37,6 @@ $(function(){
 		 		$(".right h4 input").prop("checked",false);
 				$(this).prop("checked",true);
 		})
+
 })
 

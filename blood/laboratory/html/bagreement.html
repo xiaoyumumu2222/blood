@@ -4,19 +4,52 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/transfusion.css"/>
 		<style type="text/css">
 			html,body{width: 100%;}
 			.header{width: 100%;}
 			.footer{width: 100%;}
 			#address button{margin-top: 4px;margin-left: 10px;color: #666666;background: #f4f8f9;border: 1px solid #e5e9ea;}
 			#address span{float: right;margin-right: 40px;}
-			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .b1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
 			#box div{background: white;display: inline-block;width: 100%;}
 			#box .b1{box-shadow: 2px 2px 4px #CCCCCC;width: 98%;margin: 0 1%;}
 			#box .b1 table{width: 97%;margin: 20px auto;}
 			#box .b1 tr:nth-of-type(odd){background: #f4f9fd;}
 			#box .b1 tr:nth-of-type(even){background: white;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:30%;width: 22%;min-width:200px;margin:0 39%;z-index: 11;background: #fff;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top div{margin-top: 10px;}
+			#shade .top div p{line-height: 28px;}
+			#shade .top div p:last-child{width: 78%;float: right;margin:14px 22% 20px 0;}
+			#shade .top div p:last-child button{float: right;margin-left: 20px;}
+			#shade .top div p span{display: inline-block;width: 34%;text-align: right;}
+			#shade .top div p select{width:36%;height: 22px;}
+			#shade .top div p input{width:43%;height: 20px;}
+			#shade1 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade1 .top{position:fixed;left:0;top:10%;width: 60%;min-width:200px;margin:0 20%;z-index: 11;background: #F5F5F5;}
+			#shade1 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade1 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade1 .top .t1 div{display: inline-block;width:94%;margin:10px 3% 0;}
+			#shade1 .top .t1 span{font-weight: bold;}
+			#shade1 .top .t1 .p1{width: 40%;float: left;}
+			#shade1 .top .t1 .p1 b{color: #e5001b;font-weight: bold;}
+			#shade1 .top .t1 .p1 input{margin-left: 20px;width: 40%;margin: 0;}
+			#shade1 .top .t1 .p2{width: 40%;float: left;}
+			#shade1 .top .t1 .p2 b{color: #e5001b;font-weight: bold;}
+			#shade1 .top .t1 .p2 input{margin-left: 20px;width: 40%;margin: 0;}
+			#shade1 .top .t1 .p3{width: 20%;float: left;text-align: right;}
+			#shade1 .top .t1 table{margin-bottom: 20px;width: 100%;}
+			#shade1 .top .t2 table{margin-bottom: 20px;width: 100%;}
+			#shade1 .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;color: #323232;padding: 0;}
+			#shade1 .top .t1{box-shadow: 2px 2px 4px #CCCCCC;background: white;width: 96%;margin: 10px 2%;}
+			#shade1 .top .t2{margin: 10px 2% 20px;box-shadow: 2px 2px 4px #CCCCCC;background: white;width: 96%;}
+			#shade1 .top .t2 div{display: inline-block;width:94%;margin:10px 3% 0;}
+			#shade1 .top .t2 p{width: 100%;}
+			#shade1 .top .t2 p button{float: right;}
+			#shade1 .top div p input[type="text"]{width:50%;height: 20px;}
 		</style>
 		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
@@ -255,6 +288,171 @@
 					</tr>
 				</table>
 			</div>
+			<div id="shade" style="display: block;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—同意书管理查询条件设定<span>╳</span></h3>
+					<div>
+						<p><span>签署日F：</span><input type="text"/></p>
+						<p><span>签署日T：</span><input type="text"/></p>
+						<p><span>ABO血型：</span><select name=""><option value=""></option></select></p>
+						<p><span>RH血型：</span><select name=""><option value=""></option></select></p>
+						<p><span>申请科别：</span><select name=""><option value=""></option></select></p>
+						<p><span>申请医生：</span><select name=""><option value=""></option></select></p>
+						<p><span>确认状态：</span><select name=""><option value=""></option></select></p>
+						<p><button>退出</button><button>查询</button></p>
+					</div>
+				</div>
+			</div>
+			<div id="shade1" style="display: block;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—同意书结果确认录入<span>╳</span></h3>
+					<div class="t1">
+						<h3>同意书复核</h3>
+						<div>
+							<p class="p1"><span>工号：</span><input type="text"/><b> 在此扫描工号</b></p>
+							<p class="p2"><span>同意书号：</span><input type="text"/><b> 在此扫描同意书号</b></p>
+							<p class="p3"><button>退出</button></p>
+						</div>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="4%">NO</th>
+									<th width="10%">同意书单号</th>
+									<th width="8%">病历号</th>
+									<th width="6%">姓名</th>
+									<th width="6%">年龄</th>
+									<th width="6%">性别</th>
+									<th width="8%">ABO血型</th>
+									<th width="8%">RH血型</th>
+									<th width="10%">确认者</th>
+									<th width="12%">确认日期</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>确认者1</td>
+									<td>2016/10/11</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>确认者1</td>
+									<td>2016/10/11</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>确认者1</td>
+									<td>2016/10/11</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>确认者1</td>
+									<td>2016/10/11</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>未确认同意书列表</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th width="4%">NO</th>
+									<th width="14%">签署日期</th>
+									<th width="8%">同意书单号</th>
+									<th width="8%">病历号</th>
+									<th width="8%">姓名</th>
+									<th width="6%">年龄</th>
+									<th width="6%">性别</th>
+									<th width="6%">ABO血型</th>
+									<th width="6%">RH血型</th>
+									<th width="10%">状态</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2016/10/11 09:11</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>未确认</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2016/10/11 09:11</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>未确认</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2016/10/11 09:11</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>未确认</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2016/10/11 09:11</td>
+									<td>1112222</td>
+									<td>1112222</td>
+									<td>张三</td>
+									<td>16</td>
+									<td>男</td>
+									<td>A型</td>
+									<td>阳性(+)</td>
+									<td>未确认</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>	
 		</div>
 		<script src="../js/common/footer.js" type="text/javascript" charset="utf-8"></script>
 	</body>

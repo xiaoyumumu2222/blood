@@ -9,15 +9,16 @@
 .top1 .center b{font-weight: bold;}
 .top1 .center1{width: 33.6%;float: left;background: #F5F5F5;margin-left: 1%;border: none;margin-top: 10px;}
 .top1 .right{box-shadow: 2px 2px 8px #CCCCCC;width: 19%;margin-top: 10px;}
-.top1 .left>div{box-shadow: 2px 2px 8px #CCCCCC;display: inline-block;width: 100%;background: white;}
+.top1 .left .l1,.top1 .left .l2{box-shadow: 2px 2px 8px #CCCCCC;display: inline-block;width: 100%;background: white;}
 .top1 .left .l2{margin-top: 10px;}
-.top1 .left>div p{margin-top: 4px;}
-.top1 .left>div p:nth-last-child(9){margin-top: 10px;}
-.top1 .left div p span{display: inline-block;width: 40%;text-align: right;}
-.top1 .left div p input[type="text"]{width: 40%;}
-.top1 .left div p select{width: 40.5%;height: 20px;}
-.top1 .left>div p b{font-weight: normal;}
-.top1 .left>div button{float: right;margin-right: 15px;}
+.top1 .left .l2 p{margin-top: 4px;}
+.top1 .left .l2 p:nth-last-child(9){margin-top: 10px;}
+.top1 .left .l2 p span{display: inline-block;width: 40%;text-align: right;}
+.top1 .left .l2 p input[type="text"]{width: 40%;}
+.top1 .left .l2 p select{width: 40.5%;height: 20px;}
+.top1 .left .l2 p b{font-weight: normal;}
+.top1 .left .l2 button{float: right;margin-right: 15px;}
+.top1 .left .l1 div{width: 100%;overflow: scroll}
 .top1 .left table{margin-bottom: 20px;margin-top: 10px;}
 .top1 .left table tr:nth-of-type(odd){background: #f4f9fd;}
 .top1 .left table tr:nth-of-type(even){background: none;}
