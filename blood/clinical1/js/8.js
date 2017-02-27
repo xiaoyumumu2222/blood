@@ -1,14 +1,17 @@
 $(function(){
 	$(".btn button").on("mouseover",function(){
-		$(this).siblings().css({
-			background:"#f4f8f9",
-			color:"#666",
-			border:"1px solid #e9ebea"
-		})
 		$(this).css({
 			background:"#45a7f2",
 			color:"#fff",
-			border:"1px solid #45a7f2"
+			border:"1px solid #45a7f2",
+			cursor:"pointer"
+		})
+	})
+	$(".btn button").on("mouseout",function(){
+		$(".btn button").css({
+			background:"#f4f8f9",
+			color:"#666",
+			border:"1px solid #e9ebea"
 		})
 	})
 	$(":button").each(function(){
@@ -25,6 +28,25 @@ $(function(){
 	$(".center").height($(".left").height());
 	$(".center1").height($(".left").height());
 	$(".right").height($(".left").height());
+	if(minheight<640){
+			$(".left").height(640);
+			$(".center").height($(".left").height());
+			$(".center1").height($(".left").height());
+			$(".right").height($(".left").height());
+		}
+		$(window).resize(function(){
+		    var minheight=$(window).height()-92-$(".btn").height();
+			$(".left").height(minheight);
+			$(".center").height($(".left").height());
+			$(".center1").height($(".left").height());
+			$(".right").height($(".left").height());
+			if(minheight<640){
+				$(".left").height(640);
+				$(".center").height($(".left").height());
+				$(".center1").height($(".left").height());
+				$(".right").height($(".left").height());
+			}
+		});
 	var n1=$(".left").height()-$(".l1").height()-10;
 	$(".l2").height(n1);
 	var n2=$(".center1").height()-$(".cc1").height()-10;
@@ -50,4 +72,9 @@ $(function(){
 			$(".nth6").hide();
 			$(".nth"+n1).show();
 		})
+	
+	$(document).on("click",".c2 ul li",function(){
+		$(this).addClass("act");
+		$(this).siblings().removeClass("act");
+	})
 })

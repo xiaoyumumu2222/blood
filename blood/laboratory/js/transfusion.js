@@ -134,5 +134,29 @@ $(function(){
 					$(".d4").show();
 				}
 		 })
+		  
+		  
+	$("#address button").on("mouseover",function(){
+		$(this).css({
+			background:"#45a7f2",
+			color:"#fff",
+			border:"1px solid #45a7f2",
+			cursor:"pointer"
+		})
+	})
+	$("#address button").on("mouseout",function(){
+		$("#address button").css({
+			background:"#f4f8f9",
+			color:"#666",
+			border:"1px solid #e9ebea"
+		})
+	})
+	$(":button").each(function(){
+		if($(this).attr("disabled")=="disabled"){
+		$(this).css({
+			cursor:"not-allowed"
+			})
+		}
+	});
 	})
 				

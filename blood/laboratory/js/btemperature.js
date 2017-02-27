@@ -93,4 +93,6 @@ $(function(){
 					$("#container1").show();
 				}
 		 })
+		    
+	$("#shade1 .t2").height($("#shade1 .t1").height()); 		    
 })

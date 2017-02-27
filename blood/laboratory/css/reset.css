@@ -4,7 +4,7 @@ ol, ul {list-style:none} :focus {outline:none; }
 table {border-collapse:collapse;border-spacing: 0} 
 caption, th, td { text-align: left; font-weight: normal} 
 strong {font-weight:600} 
-a{font:16px Arial;text-decoration:none;color:#404040;cursor:pointer;} 
+a{font:16px Arial;text-decoration:none;color:#404040;cursor:pointer;display: inline-block;width: 100%;} 
 h1{font-size:16px;font-weight:600;color:#666} .left{float:left} .right{float:right} .clear{clear:both}
 .clearfix:after {content:"\200B";display:block;height:0;clear:both; } 
 .clearfix {*zoom:1;}/*IE/7/6*/
@@ -24,9 +24,9 @@ table {border-collapse:collapse;border-spacing:0;table-layout:fixed;}
 .header>div>ul>li>ul li:hover a{opacity: 1;color: white;}
 .header>div>ul>li>ul li:hover{background: #45a7f2;}
 .header>ul{float: right;margin-top: 10px;margin-right:22px;}
-.header>ul li a{color: white;font-size: 13px;border-right:1px solid #fff ;padding: 0 5px;}
-.header>ul li:last-child a{border: none;}
-.header>ul>li{float: left;}
+.header>ul li a{color: white;font-size: 13px;display: inline-block;}
+.header>ul>li{float: left;border-right:1px solid #fff ;padding: 0 8px;box-sizing: border-box;}
+.header>ul li:last-child{border: none;}
 #hhead{height: 100px;}
 #hfoot{height: 50px;}
 .header ul li.active{border-bottom: 3px solid white;}
@@ -64,7 +64,5 @@ tr:nth-of-type(even){background: #f4f9fd;}
 #bottom p{margin: 12px 0 0 40px;color: #44a5f2;float: left;font-weight: bold;line-height: 40px;}
 #bottom button{float: right;margin:15px 34px 10px 0;}
 #bottom .barcode2,#bottom .barcode3,#bottom .barcode4{display: none;}
-/*.right>div{margin-top:18px ;}
-.right>div p{margin-bottom: 4px;}*/
 input[disabled]{background: #e4e6e5;}
 textarea[disabled]{background: #e4e6e5;}

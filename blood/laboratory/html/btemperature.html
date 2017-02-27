@@ -11,7 +11,8 @@
 			.footer{width: 100%;}
 			#address button{margin-top: 7px;margin-left: 10px;color: #323232;background: #f4f8f9;border: 1px solid #e5e9ea;}
 			#address span{float: right;margin-right: 40px;}
-			#box h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .left h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
+			#box .right h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;}
 			#box div{background: white;display: inline-block;width: 100%;}
 			#box .left table{width: 97%;margin: 20px auto;}
 			#box .left tr:nth-of-type(odd){background: #f4f9fd;}
@@ -31,6 +32,79 @@
 			#box .right .r2 p button{margin-left: 20px;}
 			#container1 table{width: 100%;}
 			#container1 table select{width: 60%;}
+			#shade .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade .top{position:fixed;left:0;top:30%;width: 22%;min-width:200px;margin:0 39%;z-index: 11;background: #fff;}
+			#shade .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade .top div{margin-top: 10px;}
+			#shade .top div p{line-height: 28px;}
+			#shade .top div p:last-child{width: 70%;float: right;margin:14px 30% 20px 0;}
+			#shade .top div p:last-child button{float: right;margin-left: 20px;}
+			#shade .top div p span{display: inline-block;width: 34%;text-align: right;}
+			#shade .top div p span:last-child{text-align: left;}
+			#shade .top div p select{width:36%;height: 22px;}
+			#shade .top div p input[type="text"]{width:43%;height: 20px;}
+			#shade .top div p:nth-last-child(2){margin-left: 40px;}
+			#shade .top div p:nth-last-child(2) span{text-align: left;width: 30%;}
+			#shade1 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade1 .top{position:fixed;left:0;top:30%;width: 50%;min-width:200px;margin:0 25%;z-index: 11;background: #F5F5F5;}
+			#shade1 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade1 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade1 .top .t1 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;padding: 0;color: #323232;}
+			#shade1 .top .t2 h3{width:100%;height: 40px;line-height:40px;border-bottom: 2px solid #70c871;background: url(../img/icon.png) no-repeat 11px center ;text-indent: 44px;padding: 0;color: #323232;}
+			#shade1 .top .t1{width: 30%;float: left;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;margin-bottom: 10px;}
+			#shade1 .top .t2{width: 67%;float: left;margin-left: 1%;box-shadow: 2px 2px 4px #CCCCCC;margin-bottom: 10px;}
+			#shade1 .top div{margin-top: 10px;}
+			#shade1 .top div p{line-height: 28px;}
+			#shade1 .top .t1 p span{display: inline-block;width: 35%;text-align: right;}
+			#shade1 .top .t1 .p1 span:last-child,#shade1 .top .t1 .p1 span:nth-last-child(2){width:32%;text-align: left;}
+			#shade1 .top .t1 p input[type="text"]{width: 50%;}
+			#shade1 .top .t1 p select{width: 50%;height: 24px;}
+			#shade1 .top .t1 p textarea{width: 49%;height: 50px;vertical-align: top;}
+			#shade1 .top .t1 p:last-child{margin: 20px 0;text-align: center;}
+			#shade1 .top .t1 p button{margin-left: 10px;}
+			#shade1 .top .t2 table{width: 90%;margin: 10px 5%;}
+			#shade2 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade2 .top{position:fixed;left:0;top:20%;width: 36%;min-width:200px;margin:0 32%;z-index: 11;background: #F5F5F5;}
+			#shade2 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade2 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade2 .top .t1{width: 100%;margin: 0;}
+			#shade2 .top .t2{width:100%;margin: 0;}
+			#shade2 .top div{margin-top: 10px;}
+			#shade2 .top div p{line-height: 28px;}
+			#shade2 .top .t1 table{width: 90%;margin: 10px 5%;}
+			#shade2 .top .t2 p{text-align: center;}
+			#shade2 .top .t2 dl dt,#shade2 .top .t2 dl dd{width: 50%;float: left;}
+			#shade2 .top .t2 dl p{text-align: left;}
+			#shade2 .top .t2 dl p span{width: 35%;text-align: right;display: inline-block;}
+			#shade2 .top .t2 dl p input{width: 40%;}
+			#shade2 .top .t2 p button{margin: 20px 0 20px 20px;}
+			#shade2 .top .t2 b{color: #e5001b;}
+			#shade3 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade3 .top{position:fixed;left:0;top:35%;width: 26%;min-width:200px;margin:0 37%;z-index: 11;background: #F5F5F5;}
+			#shade3 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade3 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade3 .top div p{text-align: center;}
+			#shade3 .top div dl dt,#shade3 .top div dl dd{width: 50%;float: left;margin-top: 10px;}
+			#shade3 .top div dl p{text-align: left;width: 100%;margin-top: 6px;}
+			#shade3 .top div dl p span{width: 45%;text-align: right;display: inline-block;}
+			#shade3 .top div dl p input{width: 30%;}
+			#shade3 .top div p button{margin: 20px 0;}
+			#shade4 .bot{background: black;opacity: 0.8;filter:alpha(opacity=80);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;}
+			#shade4 .top{position:fixed;left:0;top:30%;width: 36%;min-width:200px;margin:0 32%;z-index: 11;background: #F5F5F5;}
+			#shade4 .top h3{height: 50px;background: #45a7f2 url(../img/logo.png) no-repeat 15px center;line-height: 50px;color: white;padding-left: 50px;font-size: 17px;}
+			#shade4 .top h3 span{float: right;margin-right: 30px;font-size: 30px;}
+			#shade4 .top .t1{width: 100%;float: left;margin:0;}
+			#shade4 .top .t2{width: 100%;float: left;margin:0;}
+			#shade4 .top div{margin-top: 10px;}
+			#shade4 .top div p{line-height: 28px;}
+			#shade4 .top .t1 p span{display: inline-block;width: 20%;text-align: right;}
+			#shade4 .top .t1 .p1 span:last-child,#shade4 .top .t1 .p1 span:nth-last-child(2){text-align: left;width: 12%;}
+			#shade4 .top .t1 p input[type="text"]{width: 20%;}
+			#shade4 .top .t1 p select{width: 20%;height: 24px;}
+			#shade4 .top .t1 p textarea{width: 49%;height: 50px;vertical-align: top;}
+			#shade4 .top .t1 p button{margin-right: 30px;float: right;}
+			#shade4 .top .t2 table{width: 90%;margin: 10px 5% 20px;}
 		</style>
 		<script src="../js/common/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common/jquery.jedate.js" type="text/javascript" charset="utf-8"></script>
@@ -193,6 +267,209 @@
 								</tr>
 							</table>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div id="shade" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—其他查询<span>╳</span></h3>
+					<div>
+						<p><span>查询条件：</span><span>2016/10/14</span></p>
+						<p><span><input type="radio"/>日查询</span><span><input type="radio"/>月查询</span><span><input type="radio"/>年查询</span></p>
+						<p><button>退出</button><button>查询</button></p>
+					</div>
+				</div>
+			</div>
+			<div id="shade1" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—其他查询<span>╳</span></h3>
+					<div class="t1">
+						<h3>设备信息录入</h3>
+						<div>
+							<p><span>设备区分：</span><select name=""><option value="">冷冻</option></select></p>
+							<p><span>设备名称：</span><input type="text"/></p>
+							<p><span>设备名称：</span><input type="text"/></p>
+							<p class="p1"><span>有效状态：</span><span><input type="radio"/>有效</span><span><input type="radio"/>无效</span></p>
+							<p><span>备注：</span><textarea></textarea></p>
+							<p><button>新增</button><button>删除</button><button>保存</button></p>
+						</div>
+					</div>
+					<div class="t2">
+						<h3>设备信息列表</h3>
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th>选择</th>
+									<th>编号</th>
+									<th>区分</th>
+									<th width="30%">设备名称</th>
+									<th width="30%">备注</th>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>冷藏</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>xxxx</td>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>冷藏</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>xxxx</td>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>冷藏</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>xxxx</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="shade2" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—数值设定<span>╳</span></h3>
+					<div class="t1">
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th>选择</th>
+									<th>编号</th>
+									<th>区分</th>
+									<th width="30%">设备名称</th>
+									<th width="">温度(℃)</th>
+									<th width="">误差(±)</th>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>冷藏</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>xxxx</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>冷藏</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>xxxx</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>冷藏</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>xxxx</td>
+									<td>3</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="t2">
+						<div>
+							<dl>
+								<dt>
+									<p><span>刷新频率：</span><input type="text"/> 分/次<b> ※</b></p>
+								</dt>
+								<dd>
+									<p><span>质管员电话：</span><input type="text"/></p>
+									<p><span>科主任电话：</span><input type="text"/></p>
+								</dd>
+							</dl>
+							<p><button>设定</button><button>批量设定</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="shade3" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—批量设定<span>╳</span></h3>
+					<div>
+						<div>
+							<dl>
+								<dt>
+									<p><span>冷藏控制：</span><input type="text"/> ℃</p>
+									<p><span>冷冻控制：</span><input type="text"/> ℃</p>
+								</dt>
+								<dd>
+									<p><span>误差(±)：</span><input type="text"/> ℃</p>
+									<p><span>误差(±)：</span><input type="text"/> ℃</p>
+								</dd>
+							</dl>
+							<p><button>批量设定</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="shade4" style="display: none;">
+				<div class="bot">
+					
+				</div>
+				<div class="top">
+					<h3>同烁—异常查询<span>╳</span></h3>
+					<div class="t1">
+						<div>
+							<p><span>设备编号：</span><select name=""><option value="">冷冻</option></select></p>
+							<p><span>温控日期：</span><input type="text"/>--<input type="text"/></p>
+							<p class="p1"><span>异常类型：</span><span><input type="radio"/>次数</span><span><input type="radio"/>原因</span></p>
+							<p><span>异常原因：</span><select name=""><option value="">冷冻</option></select><button>打印</button><button>查询</button></p>
+						</div>
+					</div>
+					<div class="t2">
+						<div>
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th>NO</th>
+									<th>编号</th>
+									<th width="30%">设备名称</th>
+									<th width="30%">异常次数</th>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td><input type="radio"/></td>
+									<td>0001</td>
+									<td>红细胞冷藏1号柜</td>
+									<td>2</td>
+								</tr>
+							</table>
+						</div>
+						
 					</div>
 				</div>
 			</div>
